@@ -1,0 +1,42 @@
+.Card {
+  position: relative;
+  background-color: #fff;
+}
+
+.Logo {
+  font-family: "Dancing Script";
+  font-size: 42px;
+  color: #50506b;
+
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.Nav {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 10px 20px;
+}
+
+.Nav_link {
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+
+  font-size: 16px;
+  color: #50506b;
+  letter-spacing: 1.2px;
+}
+
+.Nav_link:hover {
+  color: #5f9ea0;
+}
+
+.Search {
+  display: flex;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  margin: 10px 20px;
+}
