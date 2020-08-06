@@ -8,8 +8,8 @@ import Search from "../common/search";
 class Hero extends Component {
   state = {
     link: [
-      { name: "Bread", path: "bread/1" },
-      { name: "Cake", path: "cake" },
+      { name: "Bread", path: "/bread/" },
+      { name: "Cake", path: "/cake/" },
     ],
     value: "",
   };

@@ -1,17 +1,12 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-class tag extends Component {
-  render() {
-    return (
-      <NavLink
-        to={`./${this.props.path}`}
-        className={this.props.nav_link_style}
-      >
-        {this.props.name}
-      </NavLink>
-    );
-  }
-}
+const Tag = (props) => {
+  return (
+    <Link to={`${props.path}`} className={props.nav_link_style}>
+      {props.name}
+    </Link>
+  );
+};
 
-export default tag;
+export default Tag;

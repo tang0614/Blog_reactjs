@@ -7,9 +7,9 @@ import Social from "../common/social";
 class Header extends Component {
   state = {
     link: [
-      { name: "HOME", path: "" },
-      { name: "ABOUT", path: "about" },
-      { name: "CONTACT US", path: "contact" },
+      { name: "HOME", path: "/" },
+      { name: "ABOUT", path: "/about" },
+      { name: "CONTACT US", path: "/contact" },
     ],
   };
   render() {

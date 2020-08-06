@@ -41,6 +41,7 @@ class Bread extends Component {
     const posts = postData.data;
 
     const postId = this.props.match.params.postId;
+
     let post = null;
 
     const found = posts.find((post) => post.id === postId);
@@ -53,27 +54,22 @@ class Bread extends Component {
         content: found.content,
       };
     } else {
-      if (postId === "1") {
-        post = this.state.post;
-      } else {
-        this.props.history.replace("/notfound");
-      }
+      post = this.state.post;
     }
-
     const link = posts.map((post) => {
       return { name: post.title, path: `${post.id}` };
     });
-    this.setState({ link });
+
     this.setState({ post });
+    this.setState({ link });
   }
 
   componentDidUpdate(prevProps) {
     console.log("componentDidUpdate");
     const preurl = prevProps.location.pathname;
     const currenturl = this.props.location.pathname;
-    console.log("currenturl", currenturl);
     if (preurl !== currenturl) {
-      window.location = currenturl;
+      window.location.replace(currenturl);
     }
   }
 
@@ -85,6 +81,7 @@ class Bread extends Component {
           about_card={this.state.about_card}
           contact_card={this.state.contact_card}
           cake_card={this.state.cake_card}
+          posts={this.state.posts}
           link={this.state.link}
         />
       </div>

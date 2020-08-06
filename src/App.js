@@ -16,15 +16,15 @@ function App() {
     <div className={Classes.App}>
       <Header />
       <Hero />
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/bread/" component={Bread} />
         <Route exact path="/bread/:postId" component={Bread} />
         <Route exact path="/cake" component={Cake} />
         <Route exact path="/ingredient" component={Ingredient} />
-
-        <Redirect to="/notfound" component={Notfound} />
       </Switch>
     </div>
   );
