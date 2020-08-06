@@ -6,12 +6,16 @@ import Social from "../common/social";
 
 class Header extends Component {
   state = {
-    name: ["HOME", "ABOUT", "CONTACT US"],
+    link: [
+      { name: "HOME", path: "" },
+      { name: "ABOUT", path: "about" },
+      { name: "CONTACT US", path: "contact" },
+    ],
   };
   render() {
     return (
       <Card style={Classes.Header}>
-        <Nav name={this.state.name} nav_link_style={Classes.Nav_link} />
+        <Nav link={this.state.link} nav_link_style={Classes.Nav_link} />
         <Social />
       </Card>
     );

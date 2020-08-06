@@ -1,0 +1,33 @@
+.Post_category {
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: center;
+}
+.Post_title {
+  font-family: "Rancho", cursive;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-transform: capitalize;
+  text-align: center;
+}
+.Post_by {
+  font-family: "Kalam", cursive;
+  font-style: italic;
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Post_content {
+  margin: 10px auto;
+  width: 85%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+
+.Img {
+  width: 100%;
+}

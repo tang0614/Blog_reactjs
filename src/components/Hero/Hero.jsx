@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import Card from "../common/card";
 import Classes from "./Hero.module.css";
 import Logo from "../common/logo";
-import Tag from "../common/tag";
 import Nav from "../common/nav";
 import Search from "../common/search";
 
 class Hero extends Component {
   state = {
-    name: ["Home", "Features", "Blog", "Documentation"],
+    link: [
+      { name: "Bread", path: "bread" },
+      { name: "Cake", path: "cake" },
+    ],
     value: "",
   };
 
@@ -17,19 +19,26 @@ class Hero extends Component {
     this.setState({ value });
   };
 
+  submitForm = (e) => {
+    e.preventDefault();
+    console.log("submitted");
+  };
+
   render() {
     return (
       <Card style={Classes.Card}>
         <Logo style={Classes.Logo} />
         <Nav
-          name={this.state.name}
+          link={this.state.link}
           nav_link_style={Classes.Nav_link}
           nav_style={Classes.Nav}
         />
         <Search
           style={Classes.Search}
+          inputStyle={Classes.SearchInput}
           value={this.state.value}
           onChange={this.searchMethod}
+          onSubmit={this.submitForm}
         />
       </Card>
     );

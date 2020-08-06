@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Tag = (props) => {
   return (
-    <a href="#" className={props.nav_link_style}>
+    <NavLink to={`./${props.path}`} className={props.nav_link_style}>
       {props.name}
-    </a>
+    </NavLink>
   );
 };
 
