@@ -1,0 +1,24 @@
+.Home {
+  display: flex;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.Column {
+  display: flexbox;
+  width: 28%;
+  margin: 20px auto;
+}
+
+.ColumnLarge {
+  display: flexbox;
+  width: 38%;
+  margin: 20px auto;
+}
+
+.Card {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "category": "Cake",
+      "title": "Burnt Sugar Caramel Cake",
+      "by": "Posted on September 9, 2019 ",
+      "imageLocation": "burnt-sugar-cake",
+      "content": "This burnt sugar caramel cake is a wonderfully sweet and buttery cake flavored with homemade burnt sugar syrup. The syrup combines caramelized sugar and water, a mixture you cook on the stove until it’s dark amber in color. The cake does not taste burnt, bitter, or charred. Rather, it tastes like caramel and caramelized sugar, the same topping used for creme brûlée! We’ll flavor the frosting with burnt sugar syrup as well. Inside the cake and frosting, the syrup tastes like caramel. In my experience, this is the only from-scratch caramel flavored addition that (1) provides flavor and (2) doesn’t ruin the cake’s texture."
+    },
+    {
+      "id": "2",
+      "category": "Cake",
+      "title": "Pineapple Upside Down Cake",
+      "by": "Posted on April 9, 2020",
+      "imageLocation": "pineapple-upside-down-cake",
+      "content": "I developed and published a pineapple upside down cake recipe several years ago. It’s certainly loved by many, but the cake is prone to overflowing because there’s quite a lot of batter. Additionally, it can taste overly wet and the instructions were never written very clearly. As a cookbook author and baker, I’ve certainly improved my craft over the years! Though I kept the original recipe written in the notes below, I want to share my new and improved version with you.My improved pineapple upside down cake recipe, written below, is much softer than my original. Using creamed butter instead of melted, cake flour instead of all-purpose flour, all white sugar instead of brown sugar + white, and using egg whites guarantees a huge textural difference. I adapted it from my white cake. Additionally, we’ll skip the pineapple juice in the cake batter because it often produces a wet crumb. (There’s plenty of pineapple flavor in the topping!) Finally, my new recipe doesn’t yield as much cake batter, so we don’t have to worry about overflowing."
+    },
+    {
+      "id": "3",
+      "category": "Cake",
+      "title": "Pavlova",
+      "by": "Posted on March 21, 2018 ",
+      "imageLocation": "pavlova",
+      "content": "What is pavlova? Pavlova is a dessert popular in New Zealand and Australia. It’s not as common here in the states, but I hope to help change that! A texture freak’s dream come true, pavlova is made from egg whites that are slowly baked in a relatively cool oven. The egg whites take on a chewy-crisp texture on top, a soft marshmallow texture inside, and a crunchy crisp texture around the edges. That’s three completely different textures in one single bite. The crunchy edges are just like meringue cookies."
+    }
+  ]
+}

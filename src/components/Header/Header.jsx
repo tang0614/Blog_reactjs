@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Classes from "./Header.module.css";
 import Card from "../common/card";
 import Nav from "../common/nav";
-import Social from "../common/social";
+import SocialBar from "../Social/SocialBar";
 
 class Header extends Component {
   state = {
@@ -16,7 +16,7 @@ class Header extends Component {
     return (
       <Card style={Classes.Header}>
         <Nav link={this.state.link} nav_link_style={Classes.Nav_link} />
-        <Social />
+        <SocialBar style={Classes.SocialBar} />
       </Card>
     );
   }

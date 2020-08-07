@@ -17,3 +17,7 @@
 .Nav_link:hover {
   color: #5f9ea0;
 }
+
+.SocialBar {
+  display: inline-block;
+}

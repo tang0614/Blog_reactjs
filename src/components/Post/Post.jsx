@@ -3,7 +3,6 @@ import Card from "../common/card";
 import Classes from "./Post.module.css";
 import PostContent from "../common/postContent";
 import PostHeader from "../common/postHeader";
-import PostImage from "../common/postImage";
 
 const Post = (props) => {
   const { category, title, imageLocation, by, content } = props.post;
@@ -11,7 +10,11 @@ const Post = (props) => {
   return (
     <Card style={Classes.Card}>
       <PostHeader category={category} title={title} by={by} />
-      <PostImage imageLocation={imageLocation} />
+
+      <img
+        className={Classes.Img}
+        src={require(`../../image/${imageLocation}.jpg`)}
+      />
       <PostContent content={content} />
     </Card>
   );

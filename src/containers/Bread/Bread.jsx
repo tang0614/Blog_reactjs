@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Post from "../../components/Post/Post";
 import SideBar from "../../components/SideBar/SideBar";
 import Classes from "./Bread.module.css";
-import postData from "../../data/posts.json";
+import postData from "../../data/bread.json";
 
 class Bread extends Component {
   state = {
@@ -16,19 +16,19 @@ class Bread extends Component {
     },
     about_card: {
       name: "About",
-      path: "about",
+      path: "/about",
       imageLocation: "me",
       content: "I am a shiba inu and my hobby is baking! Join with me!",
     },
     contact_card: {
       contact_name: "Contact",
-      contact_path: "contact",
+      contact_path: "/contact",
       contact_imageLocation: "contact",
       contact_content: "Email: xinyu.tang0614@gmail.com",
     },
     cake_card: {
       cake_name: "Cake",
-      cake_path: "cake",
+      cake_path: "/cake/",
       cake_imageLocation: "lavender-cake",
       cake_content: "Find more cake recipe here!",
     },
