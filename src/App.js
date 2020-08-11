@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Classes from "./App.module.css";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -25,6 +25,7 @@ function App() {
         <Route exact path="/cake/" component={Cake} />
         <Route exact path="/cake/:postId" component={Cake} />
         <Route exact path="/ingredient" component={Ingredient} />
+        <Route exact path="/notfound" component={Notfound} />
       </Switch>
     </div>
   );

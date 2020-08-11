@@ -1,0 +1,25 @@
+.Dropdown {
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: flex;
+  flex-flow: column;
+
+  background-color: white;
+  padding: 0px;
+  margin: 0;
+}
+
+.Dropdown li {
+  list-style: none;
+}
+
+.NotActive {
+  display: none;
+}
+
+.Active {
+  transition: opacity 5s ease-in;
+}

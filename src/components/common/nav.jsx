@@ -11,6 +11,7 @@ const Nav = (props) => {
             name={link.name}
             path={link.path}
             nav_link_style={props.nav_link_style}
+            showDropdown={props.showDropdown}
           />
         );
       })}
