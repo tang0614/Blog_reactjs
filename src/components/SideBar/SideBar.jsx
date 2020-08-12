@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../common/card";
 import Classes from "./SideBar.module.css";
 import InstCard from "../common/InstCard";
-import PostHeader from "../PostHeader/PostHeader";
+import Nav from "../common/nav";
 
 const SideBar = (props) => {
   const { name, path, content, imageLocation } = props.about_card;
@@ -35,7 +35,7 @@ const SideBar = (props) => {
 
       <Card style={Classes.Card}>
         <h3 className={Classes.SideBar}>{"Recent Posts"}</h3>
-        <PostHeader link={props.link} />
+        <Nav link={props.link} nav_link_style={Classes.Nav_link} />
       </Card>
 
       <Card style={Classes.Card}>

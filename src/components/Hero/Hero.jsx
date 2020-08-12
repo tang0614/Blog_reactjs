@@ -4,16 +4,24 @@ import Classes from "./Hero.module.css";
 import Logo from "../common/logo";
 import Nav from "../common/nav";
 import Search from "../common/search";
+import Dropdown from "../Dropdown/Dropdown";
 
+const link = [
+  { name: "Bread", path: "/bread" },
+  { name: "Cake", path: "/cake" },
+  { name: "ByIngredient", path: "/ingredient" },
+];
 class Hero extends Component {
   state = {
-    link: [
-      { name: "Bread", path: "/bread/" },
-      { name: "Cake", path: "/cake/" },
-    ],
     value: "",
+    show: false,
   };
 
+  showDropdown = () => {
+    this.setState((preState) => {
+      return { show: !preState.show };
+    });
+  };
   searchMethod = (e) => {
     const value = e.target.value;
     this.setState({ value });
@@ -29,9 +37,10 @@ class Hero extends Component {
       <Card style={Classes.Card}>
         <Logo style={Classes.Logo} />
         <Nav
-          link={this.state.link}
+          link={link}
           nav_link_style={Classes.Nav_link}
           nav_style={Classes.Nav}
+          showDropdown={this.showDropdown}
         />
         <Search
           style={Classes.Search}

@@ -6,6 +6,7 @@ import postData from "../../data/bread.json";
 
 class Bread extends Component {
   state = {
+    posts: "",
     post: {
       category: "Bread",
       title: "Homemade Garlic Knots",
@@ -36,14 +37,11 @@ class Bread extends Component {
     link: [{ name: "", path: "" }],
   };
 
-  componentDidMount() {
-    console.log("componentDidMount");
-    const posts = postData.data;
-
+  getPost() {
+    const posts = this.state.posts;
     const postId = this.props.match.params.postId;
 
     let post = null;
-
     const found = posts.find((post) => post.id === postId);
     if (found) {
       post = {
@@ -56,11 +54,17 @@ class Bread extends Component {
     } else {
       post = this.state.post;
     }
-    const link = posts.map((post) => {
-      return { name: post.title, path: `${post.id}` };
-    });
 
     this.setState({ post });
+  }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+    const posts = postData.data;
+    this.setState({ posts });
+    const link = posts.map((post) => {
+      return { name: post.title, path: `/bread/${post.id}` };
+    });
     this.setState({ link });
   }
 
@@ -68,8 +72,10 @@ class Bread extends Component {
     console.log("componentDidUpdate");
     const preurl = prevProps.location.pathname;
     const currenturl = this.props.location.pathname;
+
     if (preurl !== currenturl) {
-      window.location.replace(currenturl);
+      this.getPost();
+      // window.location.replace(currenturl);
     }
   }
 
@@ -81,7 +87,6 @@ class Bread extends Component {
           about_card={this.state.about_card}
           contact_card={this.state.contact_card}
           cake_card={this.state.cake_card}
-          posts={this.state.posts}
           link={this.state.link}
         />
       </div>

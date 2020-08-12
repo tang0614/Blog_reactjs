@@ -56,3 +56,7 @@
 .SocialLink {
   padding: 10px;
 }
+
+.Tag_Ingredient:hover {
+  color: blueviolet;
+}
