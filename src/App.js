@@ -24,6 +24,7 @@ function App() {
         <Route exact path="/bread/:postId" component={Bread} />
         <Route exact path="/cake/" component={Cake} />
         <Route exact path="/cake/:postId" component={Cake} />
+        <Route exact path="/ingredient/:ingredientId" component={Ingredient} />
         <Route exact path="/ingredient" component={Ingredient} />
         <Route exact path="/notfound" component={Notfound} />
       </Switch>

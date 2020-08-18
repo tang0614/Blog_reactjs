@@ -11,17 +11,19 @@ const link = [
   { name: "Cake", path: "/cake" },
   { name: "ByIngredient", path: "/ingredient" },
 ];
+
 class Hero extends Component {
   state = {
     value: "",
-    show: false,
+    showDropdown: false,
   };
 
-  showDropdown = () => {
+  changeDropdown = () => {
     this.setState((preState) => {
-      return { show: !preState.show };
+      return { showDropdown: !preState.showDropdown };
     });
   };
+
   searchMethod = (e) => {
     const value = e.target.value;
     this.setState({ value });
@@ -40,7 +42,8 @@ class Hero extends Component {
           link={link}
           nav_link_style={Classes.Nav_link}
           nav_style={Classes.Nav}
-          showDropdown={this.showDropdown}
+          showDropdown={this.state.showDropdown}
+          changeDropdown={this.changeDropdown}
         />
         <Search
           style={Classes.Search}

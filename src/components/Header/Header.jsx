@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Classes from "./Header.module.css";
 import Card from "../common/card";
 import Nav from "../common/nav";
@@ -9,15 +9,14 @@ const link = [
   { name: "ABOUT", path: "/about" },
   { name: "CONTACT US", path: "/contact" },
 ];
-class Header extends Component {
-  render() {
-    return (
-      <Card style={Classes.Header}>
-        <Nav link={link} nav_link_style={Classes.Nav_link} />
-        <SocialBar style={Classes.SocialBar} />
-      </Card>
-    );
-  }
-}
+
+const Header = () => {
+  return (
+    <Card style={Classes.Header}>
+      <Nav link={link} nav_link_style={Classes.Nav_link} />
+      <SocialBar style={Classes.SocialBar} />
+    </Card>
+  );
+};
 
 export default Header;
