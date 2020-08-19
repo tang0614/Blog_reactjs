@@ -1,6 +1,7 @@
 .Card {
   background-color: #fff;
-  width: 70%;
+  width: 68%;
+  z-index: -2;
 }
 
 .Img {

@@ -28,7 +28,7 @@ class Cake extends Component {
     },
     cake_card: {
       cake_name: "Bread",
-      cake_path: "/bread/",
+      cake_path: "/bread",
       cake_imageLocation: "garlic-knots",
       cake_content: "Find more bread recipe here!",
     },

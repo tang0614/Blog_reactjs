@@ -8,12 +8,14 @@
   display: flexbox;
   width: 28%;
   margin: 20px auto;
+  z-index: -2;
 }
 
 .ColumnLarge {
   display: flexbox;
   width: 38%;
   margin: 20px auto;
+  z-index: -2;
 }
 
 .Card {
@@ -21,4 +23,21 @@
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
+}
+
+/* browser window is 768px wide or less */
+@media (max-width: 768px) {
+  .Home {
+    margin: 5px auto;
+  }
+  .ColumnLarge {
+    display: none;
+  }
+
+  .Column {
+    width: 45%;
+  }
+  .Card {
+    padding: 10px;
+  }
 }

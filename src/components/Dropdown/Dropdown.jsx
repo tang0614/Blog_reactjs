@@ -5,8 +5,9 @@ import Nav from "../common/nav";
 
 const link = [
   { name: "Chocolate", path: "/ingredient/chocolate" },
-  { name: "Strawberry", path: "/ingredient/strawberry" },
-  { name: "Vanilla", path: "/ingredient/vanilla" },
+  { name: "Apple", path: "/ingredient/apple" },
+  { name: "Caramel", path: "/ingredient/caramel" },
+  { name: "Pineapple", path: "/ingredient/pineapple" },
 ];
 
 const Dropdown = (props) => {
@@ -14,7 +15,7 @@ const Dropdown = (props) => {
 
   return (
     <nav>
-      <ul className={Classes[dropClasses]} onClick={props.changeDropdown}>
+      <ul className={Classes[dropClasses]}>
         <Nav link={link} nav_link_style={Classes.Nav_link} />
       </ul>
     </nav>

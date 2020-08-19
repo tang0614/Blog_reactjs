@@ -1,15 +1,17 @@
 .Dropdown {
   position: absolute;
-  top: 28px;
+  top: 0px;
 
   background: white;
   width: 120px;
 
   margin: 0;
-  padding: 0;
+  padding-top: 30px;
+  padding-left: 0;
 
   list-style: none;
   text-align: start;
+  z-index: -1;
 }
 
 .DropdownClicked {
@@ -29,4 +31,11 @@
 
 .Nav_link:hover {
   color: #5f9ea0;
+}
+
+@media (max-width: 768px) {
+  .Nav_link {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
 }

@@ -4,18 +4,23 @@ import Classes from "./Hero.module.css";
 import Logo from "../common/logo";
 import Nav from "../common/nav";
 import Search from "../common/search";
-import Dropdown from "../Dropdown/Dropdown";
-
-const link = [
-  { name: "Bread", path: "/bread" },
-  { name: "Cake", path: "/cake" },
-  { name: "ByIngredient", path: "/ingredient" },
-];
+import { withRouter } from "react-router-dom";
+import Ingredient from "../../containers/Ingredient/Ingredient";
 
 class Hero extends Component {
   state = {
+    ingredient: "",
     value: "",
     showDropdown: false,
+    submitted: false,
+    link: [
+      { name: "Bread", path: "/bread" },
+      { name: "Cake", path: "/cake" },
+      { name: "ByIngredient", path: `/ingredient` },
+    ],
+  };
+  selectIngredient = (ingredient) => {
+    this.setState({ ingredient });
   };
 
   changeDropdown = () => {
@@ -32,6 +37,9 @@ class Hero extends Component {
   submitForm = (e) => {
     e.preventDefault();
     console.log("submitted");
+    this.setState({ submitted: true });
+    this.props.history.push("/ingredient");
+    console.log("pushed");
   };
 
   render() {
@@ -39,7 +47,7 @@ class Hero extends Component {
       <Card style={Classes.Card}>
         <Logo style={Classes.Logo} />
         <Nav
-          link={link}
+          link={this.state.link}
           nav_link_style={Classes.Nav_link}
           nav_style={Classes.Nav}
           showDropdown={this.state.showDropdown}
@@ -52,9 +60,12 @@ class Hero extends Component {
           onChange={this.searchMethod}
           onSubmit={this.submitForm}
         />
+        {this.state.submitted && this.state.value && (
+          <Ingredient ingredient={this.state.value} />
+        )}
       </Card>
     );
   }
 }
 
-export default Hero;
+export default withRouter(Hero);

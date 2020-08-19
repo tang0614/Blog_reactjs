@@ -50,3 +50,19 @@
 .SearchInput:focus {
   outline: none;
 }
+
+@media (max-width: 768px) {
+  .Logo {
+    font-size: 36px;
+    padding: 40px 0px;
+  }
+  .Nav_link {
+    margin: 0 3px;
+    font-size: 10px;
+  }
+  .Search {
+    width: 40%;
+    overflow: hidden;
+    margin: 10px 0px;
+  }
+}

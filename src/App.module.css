@@ -11,3 +11,9 @@ body {
   margin: 0 auto;
   border: 1px solid transparent;
 }
+
+@media (max-width: 768px) {
+  .App {
+    width: 98%;
+  }
+}

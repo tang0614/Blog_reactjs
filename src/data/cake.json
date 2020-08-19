@@ -23,6 +23,30 @@
       "by": "Posted on March 21, 2018 ",
       "imageLocation": "pavlova",
       "content": "What is pavlova? Pavlova is a dessert popular in New Zealand and Australia. It’s not as common here in the states, but I hope to help change that! A texture freak’s dream come true, pavlova is made from egg whites that are slowly baked in a relatively cool oven. The egg whites take on a chewy-crisp texture on top, a soft marshmallow texture inside, and a crunchy crisp texture around the edges. That’s three completely different textures in one single bite. The crunchy edges are just like meringue cookies."
+    },
+    {
+      "id": "4",
+      "category": "Cake",
+      "title": "Chocolate Peanut Butter",
+      "by": "Posted on October 25, 2019",
+      "imageLocation": "chocolate-peanut-butter",
+      "content": "Have I mentioned yet how easy these cookies are? Besides using super basic ingredients, the method couldn’t be simpler. Whisk the butter, sugar, milk, and cocoa powder together in a medium (3 quart) pot until the butter melts. Once simmering around the edges, start a timer. Let it simmer for 1 minute. After that, immediately remove from heat and stir in the peanut butter and vanilla extract. Once combined, stir in the oats.Grab your timer again and let the mixture cool for 4-5 minutes. This gives the oats some time to absorb the liquid, which makes scooping and shaping much easier. If you used a super thin natural-style peanut butter, let it sit for about 10 minutes."
+    },
+    {
+      "id": "5",
+      "category": "Cake",
+      "title": "Caramel Pear Pie",
+      "by": "Posted on November 3, 2017",
+      "imageLocation": "caramel-pear-pie",
+      "content": "I like to use Anjou (red or green), Bartletts (red or green), or Bosc pears in pie. To avoid a mushy filling, look for pears that are slightly firm. Your best bet is to purchase about 6-7 pears, then let them sit in a paper bag for 1-2 days to slightly ripen. Much longer than this and they’ll be too soft. You’ll only need about 5 pears for the pie, but I suggest picking up an extra in case any develop soft spots.Peel the pears, then cut them into (about) 1/2-inch chunks. You’ll mix the pears with sugar + cinnamon, and flour to thicken. A pinch of ground ginger adds that little something special, while a waterfall of caramel adds a BIG SOMETHING SPECIAL."
+    },
+    {
+      "id": "6",
+      "category": "Cake",
+      "title": "Pineapple Carrot Cake",
+      "by": "Posted on March 20, 2017",
+      "imageLocation": "pineapple-carrot-cake",
+      "content": "I like to use Anjou (red or green), Bartletts (red or green), or Bosc pears in pie. To avoid a mushy filling, look for pears that are slightly firm. Your best bet is to purchase about 6-7 pears, then let them sit in a paper bag for 1-2 days to slightly ripen. Much longer than this and they’ll be too soft. You’ll only need about 5 pears for the pie, but I suggest picking up an extra in case any develop soft spots.Peel the pears, then cut them into (about) 1/2-inch chunks. You’ll mix the pears with sugar + cinnamon, and flour to thicken. A pinch of ground ginger adds that little something special, while a waterfall of caramel adds a BIG SOMETHING SPECIAL."
     }
   ]
 }

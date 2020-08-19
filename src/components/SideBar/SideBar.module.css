@@ -1,6 +1,6 @@
 .Side {
   background-color: #e9eaed;
-  width: 25%;
+  width: 30%;
 }
 .Card {
   background-color: #fff;
@@ -11,7 +11,7 @@
 .SideBar {
   display: inline-block;
   width: 100%;
-  margin: 0 10px;
+  margin: 0 auto;
   text-decoration: none;
 
   font-size: 14px;
@@ -23,11 +23,30 @@
 .Nav_link {
   display: block;
   width: 80%;
-  padding: 15px;
+  padding: 15px 0;
+  margin: 0 auto;
   border-bottom: 1px solid #e9eaed;
   text-decoration: none;
 
   font-size: 12px;
   color: #565673;
   letter-spacing: 1.2px;
+}
+
+/* browser window is 600px wide or less */
+@media (max-width: 768px) {
+  .Card {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .SideBar {
+    font-size: 10px;
+  }
+
+  .Nav_link {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9eaed;
+    font-size: 8px;
+  }
 }

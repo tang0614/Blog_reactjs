@@ -9,7 +9,7 @@ const Search = (props) => {
         type="text"
         value={props.value}
         onChange={props.onChange}
-        placeholder="search..."
+        placeholder="search posts ..."
       />
     </form>
   );

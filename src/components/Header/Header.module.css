@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 14px auto;
 }
 
 .Nav_link {
@@ -20,4 +20,14 @@
 
 .SocialBar {
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    margin: 8px auto;
+  }
+  .Nav_link {
+    margin: 0 5px;
+    font-size: 10px;
+  }
 }
