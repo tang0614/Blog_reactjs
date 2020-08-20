@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Classes from "./Home.module.css";
+import Classes from "./home.module.css";
 import InstCard from "../../components/common/InstCard";
 import Card from "../../components/common/card";
 

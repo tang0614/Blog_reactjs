@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Classes from "./App.module.css";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Home from "./containers/Home/Home";
+import Home from "./containers/Home/home";
 import Bread from "./containers/Bread/Bread";
 import Cake from "./containers/Cake/Cake";
 import About from "./containers/About/About";
