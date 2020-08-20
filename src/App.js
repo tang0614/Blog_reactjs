@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/search/:postId" component={Search} />
-
+        <Route exact path="/cake" component={Cake} />
         <Route exact path="/cake/:postId" component={Cake} />
         <Route exact path="/ingredient" component={Ingredient} />
         <Route exact path="/notfound" component={Notfound} />

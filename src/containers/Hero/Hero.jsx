@@ -72,6 +72,7 @@ class Hero extends Component {
         name: post.title,
         path: `/cake/${post.id}`,
         imageLocation: post.imageLocation,
+        type: "search",
       };
     });
 
@@ -89,6 +90,11 @@ class Hero extends Component {
       return { showDropdown: !preState.showDropdown };
     });
   };
+  removeDropdown = () => {
+    this.setState((preState) => {
+      return { showDropdown: false };
+    });
+  };
 
   searchMethod = (e) => {
     const value = e.target.value;
@@ -98,7 +104,7 @@ class Hero extends Component {
   submitForm = (e) => {
     e.preventDefault();
     console.log("submitted");
-    if (this.state.value == "") {
+    if (this.state.value === "") {
       return;
     }
     this.filterLink();
@@ -115,6 +121,7 @@ class Hero extends Component {
             nav_style={Classes.Nav}
             showDropdown={this.state.showDropdown}
             changeDropdown={this.changeDropdown}
+            removeDropdown={this.removeDropdown}
           />
           <Search
             style={Classes.Search}

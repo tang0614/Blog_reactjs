@@ -7,6 +7,7 @@ import cakeData from "../../data/cake.json";
 
 class Cake extends Component {
   state = {
+    update: true,
     post: {
       category: "Cake",
       title: "Pineapple Upside Down Cake",
@@ -37,6 +38,43 @@ class Cake extends Component {
     link: [{ name: "", path: "" }],
   };
 
+  componentDidMount() {
+    console.log("componentDidMount");
+    const posts = cakeData.data;
+    this.setState({ posts });
+    const link = posts.map((post) => {
+      return {
+        name: post.title,
+        path: `/cake/${post.id}`,
+      };
+    });
+    this.setState({ link });
+  }
+
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
+  componentDidUpdate(prevProps) {
+    console.log("componentDidUpdate");
+    const preurl = prevProps.location.pathname;
+    const currenturl = this.props.location.pathname;
+    console.log("preurl", preurl);
+    console.log("currenturl", currenturl);
+    if (preurl !== currenturl) {
+      this.getPost();
+    } else {
+      if (
+        this.props.location.state.prevPath === "search" &&
+        preurl === currenturl
+      ) {
+        if (this.state.update) {
+          this.getPost();
+          this.setState({ update: false });
+        }
+      }
+    }
+  }
+
   getPost() {
     const posts = this.state.posts;
     const postId = this.props.match.params.postId;
@@ -58,33 +96,8 @@ class Cake extends Component {
     this.setState({ post });
   }
 
-  componentDidMount() {
-    console.log("componentDidMount");
-    const posts = cakeData.data;
-    this.setState({ posts });
-    const link = posts.map((post) => {
-      return {
-        name: post.title,
-        path: `/cake/${post.id}`,
-      };
-    });
-    this.setState({ link });
-  }
-
-  componentDidUpdate(prevProps) {
-    console.log("componentDidUpdate");
-    const preurl = prevProps.location.pathname;
-    const currenturl = this.props.location.pathname;
-    console.log(preurl);
-    console.log(currenturl);
-    if (preurl !== currenturl) {
-      console.log("getting new posts");
-      this.getPost();
-    }
-  }
-
   render() {
-    console.log(this.props);
+    console.log("update", this.state.update);
     return (
       <div className={Classes.Cake}>
         <Post post={this.state.post} />

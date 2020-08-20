@@ -4,16 +4,14 @@ import Tag from "./tag";
 const Nav = (props) => {
   return (
     <nav className={props.nav_style}>
-      {props.link.map((link, id) => {
+      {props.link.map((el, id) => {
         return (
           <Tag
             key={id}
-            name={link.name}
-            path={link.path}
-            nav_link_style={props.nav_link_style}
-            showDropdown={props.showDropdown}
-            changeDropdown={props.changeDropdown}
-            isdrop={props.isDrop}
+            name={el.name}
+            path={el.path}
+            type={el.type}
+            {...props}
           />
         );
       })}
