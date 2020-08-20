@@ -34,9 +34,7 @@ const SideBar = (props) => {
       </Card>
 
       <Card style={Classes.Card}>
-        <h3 className={Classes.SideBar}>{`${
-          cake_name == "Cake" ? "Bread" : "Cake"
-        } Posts`}</h3>
+        <h3 className={Classes.SideBar}>{"Other Posts"}</h3>
         <Nav link={props.link} nav_link_style={Classes.Nav_link} />
       </Card>
 

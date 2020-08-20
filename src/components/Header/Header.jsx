@@ -5,7 +5,6 @@ import Nav from "../common/nav";
 import SocialBar from "../Social/SocialBar";
 
 const link = [
-  { name: "HOME", path: "/" },
   { name: "ABOUT", path: "/about" },
   { name: "CONTACT US", path: "/contact" },
 ];

@@ -1,33 +1,56 @@
 import React, { Component } from "react";
-import Card from "../common/card";
+import Card from "../../components/common/card";
 import Classes from "./Hero.module.css";
-import Logo from "../common/logo";
-import Nav from "../common/nav";
-import Search from "../common/search";
+import Logo from "../../components/common/logo";
+import Nav from "../../components/common/nav";
+import Search from "../../components/common/search";
 import { withRouter, Route, Redirect } from "react-router-dom";
-import Ingredient from "../../containers/Ingredient/Ingredient";
-import breadData from "../../data/bread.json";
+
 import cakeData from "../../data/cake.json";
+import Ingredient from "../../components/Ingredient/Ingredient";
 
 class Hero extends Component {
   state = {
     posts: "",
+    post: "",
     value: "",
     showDropdown: false,
     link: [
-      { name: "Bread", path: "/bread" },
-      { name: "Cake", path: "/cake" },
+      { name: "Home", path: "/" },
+      { name: "Posts", path: "/cake" },
       { name: "ByIngredient", path: `/ingredient` },
     ],
     filteredLink: [],
   };
 
   componentWillMount() {
-    const breadPosts = breadData.data;
-    const cakePosts = cakeData.data;
-    const posts = breadPosts.concat(cakePosts);
+    const posts = cakeData.data;
     this.setState({ posts });
   }
+
+  getPost = (category, id) => {
+    const posts = this.state.posts;
+    const postId = id;
+    const cat = category;
+
+    let post = null;
+    const found = posts.find(
+      (post) => post.id === postId && post.category === cat
+    );
+    if (found) {
+      post = {
+        category: found.category,
+        title: found.title,
+        by: found.by,
+        imageLocation: found.imageLocation,
+        content: found.content,
+      };
+    } else {
+      post = this.state.post;
+    }
+
+    this.setState({ post });
+  };
 
   filterLink = () => {
     const ingredient = this.state.value;
@@ -47,7 +70,7 @@ class Hero extends Component {
     const filteredLink = filteredPosts.map((post) => {
       return {
         name: post.title,
-        path: `/${post.category}/${post.id}`,
+        path: `/cake/${post.id}`,
         imageLocation: post.imageLocation,
       };
     });
@@ -66,11 +89,6 @@ class Hero extends Component {
       return { showDropdown: !preState.showDropdown };
     });
   };
-  removeDropdown = () => {
-    this.setState((preState) => {
-      return { showDropdown: false };
-    });
-  };
 
   searchMethod = (e) => {
     const value = e.target.value;
@@ -87,8 +105,6 @@ class Hero extends Component {
   };
 
   render() {
-    console.log(this.state.showDropdown);
-
     return (
       <div style={Classes.Hero}>
         <Card style={Classes.Card}>
@@ -99,7 +115,6 @@ class Hero extends Component {
             nav_style={Classes.Nav}
             showDropdown={this.state.showDropdown}
             changeDropdown={this.changeDropdown}
-            removeDropdown={this.removeDropdown}
           />
           <Search
             style={Classes.Search}

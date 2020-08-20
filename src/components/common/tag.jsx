@@ -7,7 +7,10 @@ import Dropdown from "../Dropdown/Dropdown";
 const Tag = (props) => {
   const Tag_classes = props.name === "ByIngredient" ? "Tag_Ingredient" : null;
 
-  const changeDropdown = props.isDrop ? null : props.changeDropdown;
+  const changeDropdown =
+    !props.isDrop && props.name === "ByIngredient"
+      ? props.changeDropdown
+      : null;
 
   return (
     <Link to={`${props.path}`} className={props.nav_link_style}>

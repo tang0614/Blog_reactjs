@@ -13,7 +13,6 @@ const Nav = (props) => {
             nav_link_style={props.nav_link_style}
             showDropdown={props.showDropdown}
             changeDropdown={props.changeDropdown}
-            removeDropdown={props.removeDropdown}
             isdrop={props.isDrop}
           />
         );

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Post from "../../components/Post/Post";
 import SideBar from "../../components/SideBar/SideBar";
 import Classes from "./Cake.module.css";
-import postData from "../../data/cake.json";
+
+import cakeData from "../../data/cake.json";
 
 class Cake extends Component {
   state = {
@@ -59,10 +60,13 @@ class Cake extends Component {
 
   componentDidMount() {
     console.log("componentDidMount");
-    const posts = postData.data;
+    const posts = cakeData.data;
     this.setState({ posts });
     const link = posts.map((post) => {
-      return { name: post.title, path: `/cake/${post.id}` };
+      return {
+        name: post.title,
+        path: `/cake/${post.id}`,
+      };
     });
     this.setState({ link });
   }
@@ -71,12 +75,16 @@ class Cake extends Component {
     console.log("componentDidUpdate");
     const preurl = prevProps.location.pathname;
     const currenturl = this.props.location.pathname;
-
+    console.log(preurl);
+    console.log(currenturl);
     if (preurl !== currenturl) {
+      console.log("getting new posts");
       this.getPost();
     }
   }
+
   render() {
+    console.log(this.props);
     return (
       <div className={Classes.Cake}>
         <Post post={this.state.post} />
