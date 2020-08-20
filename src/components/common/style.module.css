@@ -53,6 +53,10 @@
   letter-spacing: 1.2px;
   text-align: center;
 }
+.Nav_link i {
+  cursor: pointer;
+}
+
 .SocialLink {
   padding: 10px;
 }
@@ -61,7 +65,7 @@
   color: pink;
 }
 
-.Tag_Ingredient i {
+.Tag_Ingredient {
   color: pink;
 }
 

@@ -16,12 +16,12 @@
   position: absolute;
   left: 0px;
   bottom: 0px;
-  margin: 10px 20px;
+  padding: 10px 20px;
 }
 
 .Nav_link {
   display: inline-block;
-  margin: 0 5px;
+  padding: 0 5px;
   text-decoration: none;
 
   font-size: 16px;

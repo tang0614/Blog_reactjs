@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import Classes from "./Dropdown.module.css";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import Nav from "../common/nav";
 
 const link = [
@@ -10,16 +9,17 @@ const link = [
   { name: "Pineapple", path: "/ingredient/pineapple" },
 ];
 
-const Dropdown = (props) => {
-  const dropClasses = props.showDropdown ? "Dropdown" : "DropdownClicked";
-
-  return (
-    <nav>
-      <ul className={Classes[dropClasses]}>
-        <Nav link={link} nav_link_style={Classes.Nav_link} />
-      </ul>
-    </nav>
-  );
-};
+class Dropdown extends Component {
+  render() {
+    const dropClasses = this.props.showDropdown
+      ? "Dropdown"
+      : "DropdownClicked";
+    return (
+      <div className={Classes[dropClasses]}>
+        <Nav link={link} nav_link_style={Classes.Nav_link} isDrop={true} />
+      </div>
+    );
+  }
+}
 
 export default Dropdown;
