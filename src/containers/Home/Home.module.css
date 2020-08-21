@@ -1,0 +1,39 @@
+.Home {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.Column {
+  display: flexbox;
+  width: 20%;
+}
+
+.ColumnLarge {
+  display: flexbox;
+  width: 30%;
+}
+
+.Card {
+  background-color: #fff;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* browser window is 768px wide or less */
+@media (max-width: 768px) {
+  .ColumnLarge {
+    width: 25%;
+  }
+
+  .Column {
+    width: 20%;
+  }
+
+  .Card {
+    padding: 10px;
+  }
+}

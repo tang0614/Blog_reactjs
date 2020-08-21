@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.App {
+  width: 90%;
+  background-color: #e9eaed;
+  margin: 0 auto;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: 98%;
+  }
+}
