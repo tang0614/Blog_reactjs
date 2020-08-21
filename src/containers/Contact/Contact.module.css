@@ -1,9 +1,0 @@
-.Contact {
-  margin: 100px;
-}
-
-@media (max-width: 768px) {
-  .Contact {
-    margin: 20px;
-  }
-}
