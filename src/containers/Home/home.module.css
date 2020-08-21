@@ -8,14 +8,11 @@
 .Column {
   display: flexbox;
   width: 20%;
-  z-index: -2;
 }
 
 .ColumnLarge {
   display: flexbox;
   width: 30%;
-
-  z-index: -2;
 }
 
 .Card {
