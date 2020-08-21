@@ -16,39 +16,12 @@ class Cake extends Component {
       content:
         "I developed and published a pineapple upside down cake recipe several years ago. It’s certainly loved by many, but the cake is prone to overflowing because there’s quite a lot of batter. Additionally, it can taste overly wet and the instructions were never written very clearly. As a cookbook author and baker, I’ve certainly improved my craft over the years! Though I kept the original recipe written in the notes below, I want to share my new and improved version with you.My improved pineapple upside down cake recipe, written below, is much softer than my original. Using creamed butter instead of melted, cake flour instead of all-purpose flour, all white sugar instead of brown sugar + white, and using egg whites guarantees a huge textural difference. I adapted it from my white cake. Additionally, we’ll skip the pineapple juice in the cake batter because it often produces a wet crumb. (There’s plenty of pineapple flavor in the topping!) Finally, my new recipe doesn’t yield as much cake batter, so we don’t have to worry about overflowing.",
     },
-    about_card: {
-      name: "About",
-      path: "/about",
-      imageLocation: "me",
-      content: "I am a shiba inu and my hobby is baking! Join with me!",
-    },
-    contact_card: {
-      contact_name: "Contact",
-      contact_path: "/contact",
-      contact_imageLocation: "contact",
-      contact_content: "Email: xinyu.tang0614@gmail.com",
-    },
-    cake_card: {
-      cake_name: "Bread",
-      cake_path: "/bread",
-      cake_imageLocation: "garlic-knots",
-      cake_content: "Find more bread recipe here!",
-    },
-
-    link: [{ name: "", path: "" }],
   };
 
   componentDidMount() {
     console.log("componentDidMount");
     const posts = cakeData.data;
     this.setState({ posts });
-    const link = posts.map((post) => {
-      return {
-        name: post.title,
-        path: `/cake/${post.id}`,
-      };
-    });
-    this.setState({ link });
   }
 
   componentWillMount() {
@@ -101,12 +74,7 @@ class Cake extends Component {
     return (
       <div className={Classes.Cake}>
         <Post post={this.state.post} />
-        <SideBar
-          about_card={this.state.about_card}
-          contact_card={this.state.contact_card}
-          cake_card={this.state.cake_card}
-          link={this.state.link}
-        />
+        <SideBar />
       </div>
     );
   }

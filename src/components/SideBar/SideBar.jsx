@@ -3,22 +3,53 @@ import Card from "../common/card";
 import Classes from "./SideBar.module.css";
 import InstCard from "../common/InstCard";
 import Nav from "../common/nav";
+import cakeData from "../../data/cake.json";
+
+const posts = cakeData.data;
+
+const link = posts.map((post) => {
+  return {
+    name: post.title,
+    path: `/cake/${post.id}`,
+  };
+});
+
+const info = {
+  about_card: {
+    name: "About",
+    path: "/about",
+    imageLocation: "me",
+    content: "I am a shiba inu and my hobby is baking! Join with me!",
+  },
+  contact_card: {
+    contact_name: "Contact",
+    contact_path: "/contact",
+    contact_imageLocation: "contact",
+    contact_content: "Email: xinyu.tang0614@gmail.com",
+  },
+  cake_card: {
+    cake_name: "Bread",
+    cake_path: "/bread",
+    cake_imageLocation: "garlic-knots",
+    cake_content: "Find more bread recipe here!",
+  },
+};
 
 const SideBar = (props) => {
-  const { name, path, content, imageLocation } = props.about_card;
+  const { name, path, content, imageLocation } = info.about_card;
   const {
     contact_name,
     contact_path,
     contact_content,
     contact_imageLocation,
-  } = props.contact_card;
+  } = info.contact_card;
 
   const {
     cake_name,
     cake_path,
     cake_content,
     cake_imageLocation,
-  } = props.cake_card;
+  } = info.cake_card;
 
   return (
     <Card style={Classes.Side}>
@@ -35,7 +66,7 @@ const SideBar = (props) => {
 
       <Card style={Classes.Card}>
         <h3 className={Classes.SideBar}>{"Other Posts"}</h3>
-        <Nav link={props.link} nav_link_style={Classes.Nav_link} />
+        <Nav link={link} nav_link_style={Classes.Nav_link} />
       </Card>
 
       <Card style={Classes.Card}>
