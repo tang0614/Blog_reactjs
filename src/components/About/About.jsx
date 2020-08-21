@@ -6,22 +6,23 @@ const About = () => {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
-        width: "90%",
+        justifyContent: "space-around",
+        width: "95%",
         margin: "20px",
+        background: "white",
       }}
     >
       <div
         style={{
-          margin: "15px",
+          margin: "30px",
         }}
       >
-        <h3>Welcome to my Kitchen!</h3>
+        <h3>Welcome !</h3>
         <p
           style={{
             fontSize: "14px",
             fontFamily: "inherit",
-            lineHeight: "20px",
+            lineHeight: "25px",
           }}
         >
           I’m so happy you’re here. Grab a cookie, take a seat, and let me

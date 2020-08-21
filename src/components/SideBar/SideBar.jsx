@@ -27,12 +27,6 @@ const info = {
     contact_imageLocation: "contact",
     contact_content: "Email: xinyu.tang0614@gmail.com",
   },
-  cake_card: {
-    cake_name: "Bread",
-    cake_path: "/bread",
-    cake_imageLocation: "garlic-knots",
-    cake_content: "Find more bread recipe here!",
-  },
 };
 
 const SideBar = (props) => {
@@ -43,13 +37,6 @@ const SideBar = (props) => {
     contact_content,
     contact_imageLocation,
   } = info.contact_card;
-
-  const {
-    cake_name,
-    cake_path,
-    cake_content,
-    cake_imageLocation,
-  } = info.cake_card;
 
   return (
     <Card style={Classes.Side}>
@@ -67,17 +54,6 @@ const SideBar = (props) => {
       <Card style={Classes.Card}>
         <h3 className={Classes.SideBar}>{"Other Posts"}</h3>
         <Nav link={link} nav_link_style={Classes.Nav_link} />
-      </Card>
-
-      <Card style={Classes.Card}>
-        {
-          <InstCard
-            name={cake_name}
-            path={cake_path}
-            imageLocation={cake_imageLocation}
-            content={cake_content}
-          />
-        }
       </Card>
 
       <Card style={Classes.Card}>

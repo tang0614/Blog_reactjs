@@ -18,7 +18,7 @@ class Hero extends Component {
     link: [
       { name: "Home", path: "/" },
       { name: "Posts", path: "/cake" },
-      { name: "ByIngredient", path: `/ingredient` },
+      { name: "ByIngredient", path: `/byIngredient` },
     ],
     filteredLink: [],
   };

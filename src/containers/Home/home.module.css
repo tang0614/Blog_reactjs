@@ -21,23 +21,21 @@
 .Card {
   background-color: #fff;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 20px;
   cursor: pointer;
 }
 
 /* browser window is 768px wide or less */
 @media (max-width: 768px) {
-  .Home {
-    margin: 5px auto;
-  }
   .ColumnLarge {
-    display: none;
+    width: 25%;
   }
 
   .Column {
-    width: 45%;
+    width: 20%;
   }
+
   .Card {
     padding: 10px;
   }

@@ -5,13 +5,13 @@ import Header from "./components/Header/Header";
 import Hero from "./containers/Hero/Hero";
 import Home from "./containers/Home/Home";
 import Cake from "./containers/Cake/Cake";
-
-import Contact from "./containers/Contact/Contact";
 import Ingredient from "./components/Ingredient/Ingredient";
 import Notfound from "./containers/NotFound/Notfound";
 import Search from "./components/common/search";
 import About from "./components/About/About";
-
+import ByIngredient from "./containers/ByIngredient";
+import Contact from "./containers/Contact/Contact";
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className={Classes.App}>
@@ -25,6 +25,7 @@ function App() {
         <Route exact path="/cake" component={Cake} />
         <Route exact path="/cake/:postId" component={Cake} />
         <Route exact path="/ingredient" component={Ingredient} />
+        <Route exact path="/byIngredient" component={ByIngredient} />
         <Route exact path="/about" component={About} />
         <Route exact path="/notfound" component={Notfound} />
       </Switch>

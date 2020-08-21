@@ -5,9 +5,26 @@ import Card from "../../components/common/card";
 import SideBar from "../../components/SideBar/SideBar";
 
 const cakes = {
-  colOne: ["lavender-cake", "burnt-sugar-cake", "chocolate-croissants"],
-  colTwo: ["garlic-knots", "pavlova", "pineapple-upside-down-cake"],
-  colThree: ["bread-bowls", "apple-blueberry"],
+  colOne: [
+    "lavender-cake",
+    "burnt-sugar-cake",
+    "chocolate-croissants",
+    "pineapple-carrot-cake",
+    "caramel-pear-pie",
+  ],
+  colTwo: [
+    "garlic-knots",
+    "pavlova",
+    "pineapple-upside-down-cake",
+    "moist-apple-bread",
+    "lavender-cake",
+  ],
+  colThree: [
+    "bread-bowls",
+    "apple-blueberry",
+    "garlic-knots",
+    "chocolate-peanut-butter",
+  ],
 };
 
 const Home = () => {
