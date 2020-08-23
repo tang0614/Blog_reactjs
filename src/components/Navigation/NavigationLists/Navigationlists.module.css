@@ -1,0 +1,19 @@
+.Navigationlists__row {
+  display: flex;
+  flex-flow: row;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+}
+
+.Navigationlists__col {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  list-style: none;
+  align-items: center;
+}
