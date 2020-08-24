@@ -1,0 +1,15 @@
+.About {
+  margin: 100px;
+}
+
+.Container {
+  margin: 30px;
+}
+@media (max-width: 768px) {
+  .About {
+    margin: 20px;
+  }
+  .Container {
+    margin: 20px;
+  }
+}
