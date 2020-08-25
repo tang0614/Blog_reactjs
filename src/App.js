@@ -4,11 +4,21 @@ import Classes from "./App.module.css";
 import Header from "./components/Header/Header";
 import Hero from "./containers/Hero/Hero";
 import Home from "./containers/Home/Home";
-import Cake from "./containers/Cake/Cake";
-import Ingredient from "./containers/Ingredient/Ingredient";
-import About from "./containers/About/About";
-import Contact from "./containers/Contact/Contact";
+import AsyncCompo from "./hoc/asyncCompo";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+
+const AsyncCake = AsyncCompo(() => {
+  return import("./containers/Cake/Cake");
+});
+
+const AsyncContact = AsyncCompo(() => {
+  return import("./containers/Contact/Contact");
+});
+
+const AsyncAbout = AsyncCompo(() => {
+  return import("./containers/About/About");
+});
 function App() {
   return (
     <div className={Classes.App}>
@@ -16,11 +26,11 @@ function App() {
       <Hero />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/cake/:postId" component={Cake} />
-        <Route exact path="/cake" component={Cake} />
+        <Route exact path="/contact" component={AsyncContact} />
+        <Route exact path="/cake/:postId" component={AsyncCake} />
+        <Route exact path="/cake" component={AsyncCake} />
 
-        <Route exact path="/about" component={About} />
+        <Route exact path="/about" component={AsyncAbout} />
       </Switch>
     </div>
   );

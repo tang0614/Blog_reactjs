@@ -5,9 +5,12 @@ import Logo from "../../components/common/logo";
 import Nav from "../../components/common/nav";
 import Search from "../../components/common/search";
 import { withRouter, Route, Redirect } from "react-router-dom";
-
+import AsyncCompo from "../../hoc/asyncCompo";
 import cakeData from "../../data/cake.json";
-import Ingredient from "../Ingredient/Ingredient";
+
+const AsyncIngredient = AsyncCompo(() => {
+  return import("../Ingredient/Ingredient");
+});
 
 class Hero extends Component {
   state = {
@@ -137,7 +140,7 @@ class Hero extends Component {
           <Route
             exact
             path="/ingredient"
-            render={() => <Ingredient link={this.state.filteredLink} />}
+            render={() => <AsyncIngredient link={this.state.filteredLink} />}
           />
         </div>
       </div>
