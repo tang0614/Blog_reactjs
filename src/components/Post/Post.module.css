@@ -7,3 +7,21 @@
   width: 100%;
   margin: 10px auto;
 }
+.Wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 45% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.9;
+}
+
+.Wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  margin: auto;
+}

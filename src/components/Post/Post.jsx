@@ -10,11 +10,12 @@ const Post = (props) => {
   return (
     <Card style={Classes.Card}>
       <PostHeader category={category} title={title} by={by} />
-
-      <img
-        className={Classes.Img}
-        src={require(`../../image/${imageLocation}.jpg`)}
-      />
+      <div className={Classes.Wrap}>
+        <img
+          className={Classes.Img}
+          src={require(`../../image/${imageLocation}.jpg`)}
+        />
+      </div>
       <PostContent content={content} />
     </Card>
   );
