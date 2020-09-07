@@ -4,10 +4,10 @@
   text-align: center;
 }
 .Post_title {
-  font-family: "Rancho", cursive;
+  font-family: "Open Sans Condensed", sans-serif;
   font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
+  font-weight: 500;
+  letter-spacing: 2px;
   margin: 0;
   text-transform: capitalize;
   text-align: center;
@@ -69,6 +69,9 @@
   color: pink;
 }
 
+.Typing {
+  display: inline;
+}
 @media (max-width: 768px) {
   .Post_category {
     font-size: 14px;
@@ -96,5 +99,11 @@
   }
   .Intro {
     display: none;
+  }
+
+  .Typing {
+    display: block;
+    font-size: 25px;
+    padding-top: 10px;
   }
 }

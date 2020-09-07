@@ -6,7 +6,7 @@ import SocialBar from "../Social/SocialBar";
 
 const link = [
   { name: "ABOUT", path: "/about" },
-  { name: "CONTACT US", path: "/contact" },
+  { name: "CONTACT", path: "/contact" },
 ];
 
 const Header = () => {
