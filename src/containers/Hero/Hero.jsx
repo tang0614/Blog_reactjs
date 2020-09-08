@@ -114,9 +114,8 @@ class Hero extends Component {
   };
 
   render() {
-    console.log(this.props.location);
     return (
-      <div style={Classes.Hero}>
+      <div>
         <Card style={Classes.Card}>
           <Logo style={Classes.Logo} />
           <Nav

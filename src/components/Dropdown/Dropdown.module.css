@@ -1,6 +1,6 @@
 .Dropdown {
   position: absolute;
-  top: 30px;
+  top: 45px;
 
   background: white;
   width: 120px;
@@ -35,5 +35,8 @@
   .Nav_link {
     padding: 7px;
     font-size: 10px;
+  }
+  .Dropdown {
+    top: 30px;
   }
 }

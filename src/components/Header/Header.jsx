@@ -12,7 +12,11 @@ const link = [
 const Header = () => {
   return (
     <Card style={Classes.Header}>
-      <Nav link={link} nav_link_style={Classes.Nav_link} />
+      <Nav
+        link={link}
+        nav_link_style={Classes.Nav_link}
+        nav_style={Classes.Nav}
+      />
       <SocialBar style={Classes.SocialBar} />
     </Card>
   );

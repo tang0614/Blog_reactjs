@@ -57,10 +57,6 @@
   cursor: pointer;
 }
 
-.SocialLink {
-  padding: 10px;
-}
-
 .Tag_Ingredient:hover {
   color: pink;
 }
@@ -99,11 +95,5 @@
   }
   .Intro {
     display: none;
-  }
-
-  .Typing {
-    display: block;
-    font-size: 25px;
-    padding-top: 10px;
   }
 }

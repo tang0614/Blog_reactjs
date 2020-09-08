@@ -1,15 +1,16 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  margin: 14px auto;
+  align-items: center;
 }
 
 .Nav_link {
   display: inline-block;
-  margin: 0 10px;
+  padding: 1em;
+  margin: 1em;
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 1rem;
   color: #565673;
   letter-spacing: 1.2px;
 }
@@ -20,14 +21,24 @@
 
 .SocialBar {
   display: inline-block;
+  padding: 1rem;
+  margin: 1rem;
+  color: "black";
 }
 
 @media (max-width: 768px) {
-  .Header {
-    margin: 8px auto;
-  }
   .Nav_link {
-    margin: 0 5px;
-    font-size: 10px;
+    font-size: 0.4rem;
+  }
+  .SocialBar {
+    display: inline-block;
+    padding: 0.4em;
+    margin: 0.4em;
+  }
+}
+
+@media (max-width: 280px) {
+  .Nav_link {
+    font-size: 0.2rem;
   }
 }
