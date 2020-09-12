@@ -57,18 +57,10 @@
   cursor: pointer;
 }
 
-.Tag_Ingredient:hover {
-  color: pink;
-}
-
-.Tag_Ingredient {
-  color: pink;
-}
-
 .Typing {
   display: inline;
 }
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .Post_category {
     font-size: 14px;
     margin: 10px 0;

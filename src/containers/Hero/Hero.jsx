@@ -19,11 +19,12 @@ class Hero extends Component {
     value: "",
     showDropdown: false,
     link: [
-      { name: "Home", path: "/" },
+      { name: "Portfolio", path: "/" },
       { name: "Posts", path: "/cake" },
       { name: "ByIngredient", path: `/cake` },
     ],
     filteredLink: [],
+    showButton: false,
   };
 
   componentWillMount() {
@@ -87,6 +88,11 @@ class Hero extends Component {
   selectIngredient = (ingredient) => {
     this.setState({ ingredient });
   };
+  changeButton = () => {
+    this.setState((preState) => {
+      return { showButton: !preState.showButton };
+    });
+  };
 
   changeDropdown = () => {
     this.setState((preState) => {
@@ -133,6 +139,20 @@ class Hero extends Component {
             onChange={this.searchMethod}
             onSubmit={this.submitForm}
           />
+
+          <button className={Classes.Button} onClick={this.changeButton}>
+            <i className="fa fa-align-justify"></i>
+            {this.state.showButton ? (
+              <Nav
+                link={this.state.link}
+                nav_link_style={Classes.Nav_link_2}
+                nav_style={Classes.Nav_2}
+                showDropdown={this.state.showDropdown}
+                changeDropdown={this.changeDropdown}
+                removeDropdown={this.removeDropdown}
+              />
+            ) : null}
+          </button>
         </Card>
 
         <div>

@@ -1,6 +1,6 @@
 .Side {
   background-color: #e9eaed;
-  width: 25%;
+  width: 100%;
 }
 .Card {
   background-color: #fff;
@@ -34,7 +34,7 @@
 }
 
 /* browser window is 600px wide or less */
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .Card {
     padding: 10px;
     margin-bottom: 10px;

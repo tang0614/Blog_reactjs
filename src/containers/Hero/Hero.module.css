@@ -7,10 +7,14 @@
   display: "inline-block";
   font-family: "Josefin Slab", serif;
   /* font-family: "Exo", sans-serif; */
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #50506b;
   padding: 3em;
   text-align: center;
+}
+
+.Logo span {
+  font-size: 2rem;
 }
 
 .Nav {
@@ -25,14 +29,15 @@
   padding: 0.5em;
   text-decoration: none;
 
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #50506b;
-  letter-spacing: 1.2px;
+  letter-spacing: 2px;
 }
 
-.Nav_link:hover {
-  color: #5f9ea0;
+.Nav_link:hover,
+.Nav_link:focus {
+  color: rgb(10, 186, 181, 0.5);
 }
 
 .Search {
@@ -40,7 +45,7 @@
   position: absolute;
   right: 0px;
   bottom: 0px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 1em;
 }
 
@@ -53,29 +58,81 @@
   outline: none;
 }
 
-@media (max-width: 768px) {
+.Button {
+  display: none;
+}
+@media (max-width: 810px) {
   .Logo {
     font-size: 2rem;
-    padding: 3em;
+    padding: 2em;
   }
+  .Logo span {
+    font-size: 1.4rem;
+  }
+
   .Nav_link {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .Search {
-    font-size: 0.5rem;
-    margin: 0.5em;
+    font-size: 0.8rem;
+    margin: 1em;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 570px) {
   .Logo {
     font-size: 1rem;
-    padding: 2em;
+    padding: 1em 2em;
   }
+  .Logo span {
+    font-size: 0.7rem;
+  }
+
   .Nav_link {
     display: none;
   }
   .Search {
     display: none;
+  }
+  .Nav_2 {
+    position: absolute;
+    bottom: -4.2rem;
+    left: 0;
+
+    background: #fff;
+    padding: 0.5rem;
+  }
+  .Nav_link_2 {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-bottom: 0.5em;
+
+    font-size: 0.5rem;
+    text-decoration: none;
+    color: #50506b;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .Nav_link_2:hover,
+  .Nav_link_2:focus {
+    color: rgb(10, 186, 181, 0.5);
+  }
+
+  .Button {
+    display: block;
+    margin: 0 1rem;
+    color: #fff;
+    border: transparent;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .Button:hover,
+  .Button:focus {
+    color: rgb(10, 186, 181, 0.5);
+    outline: none;
   }
 }

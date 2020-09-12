@@ -24,7 +24,7 @@
   z-index: -10;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .Ingredient {
     margin: 90px auto;
     height: 100px;

@@ -2,13 +2,17 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Open Sans Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
-  width: 100%;
-  max-width: 1000px;
-  background-color: #e9eaed;
+  width: 98%;
+  max-width: 1024px;
+
   margin: 0 auto;
   border: 1px solid transparent;
+
+  background-color: #e9eaed;
+  font-family: "Open Sans Condensed", sans-serif;
 }

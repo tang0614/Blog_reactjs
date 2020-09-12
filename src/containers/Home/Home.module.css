@@ -1,4 +1,169 @@
 .Home {
+  width: 95%;
+  padding: 0;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Main {
+  background: #fff;
+}
+
+.Article {
   width: 90%;
   margin: 0 auto;
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid #f0f0f0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ArticleMain {
+  width: 100%;
+  order: 1;
+}
+.ArticleMain strong {
+  font-size: 1.3rem;
+}
+
+.ArticleMain p {
+  font-size: 0.8rem;
+}
+
+.ArticleSecondary {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  order: 2;
+
+  position: relative;
+}
+.ArticleSecondary div {
+  padding: 1rem;
+}
+
+.ArticleSecondary p {
+  font-size: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.ArticleImage {
+  max-width: 100%;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  opacity: 0.78;
+}
+
+.Button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  transition: 0.5s ease;
+  opacity: 0;
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.ArticleSecondary:hover .ArticleImage {
+  opacity: 0.3;
+}
+
+.ArticleSecondary:hover .Button {
+  opacity: 1;
+}
+
+.Text {
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  border-radius: 10%;
+  letter-spacing: 1px;
+}
+.Text:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.ArticleAnchor {
+  display: block;
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: rgb(10, 186, 181);
+  margin-bottom: 1rem;
+  border: transparent;
+  outline: none;
+}
+
+.ArticleAnchor:hover,
+.ArticleAnchor:focus {
+  color: rgb(10, 186, 181, 0.5);
+}
+
+.ImageLayer {
+  background-color: red;
+}
+@media (min-width: 570px) {
+  .Home {
+    flex-direction: row;
+  }
+  .Main {
+    background: #fff;
+    width: 72%;
+  }
+
+  .Article {
+    padding: 2.5rem;
+    border-bottom: 0.2rem solid #f0f0f0;
+  }
+  .ArticleMain {
+    order: 2;
+  }
+
+  .ArticleMain strong {
+    font-size: 1.6rem;
+  }
+
+  .ArticleMain p {
+    font-size: 1.1rem;
+  }
+
+  .ArticleSecondary {
+    order: 1;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .ArticleSecondary p {
+    font-size: 0.7rem;
+  }
+
+  .Side {
+    width: 25%;
+  }
+
+  .ArticleAnchor {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .ArticleSecondary p {
+    font-size: 1rem;
+  }
+
+  .Text {
+    font-size: 1.5rem;
+  }
 }

@@ -1,12 +1,12 @@
 .Dropdown {
   position: absolute;
-  top: 45px;
+  top: 2rem;
 
   background: white;
-  width: 120px;
+  width: 7.5rem;
 
   margin: 0;
-  padding-top: 13px;
+  padding-top: 0.8rem;
 
   list-style: none;
   text-align: start;
@@ -19,24 +19,44 @@
 
 .Nav_link {
   display: block;
-  padding: 8px 10px;
+  padding: 0.5rem 0.6rem;
   margin: 0 auto;
   text-decoration: none;
 
-  font-size: 12px;
+  font-size: 0.8rem;
   color: #565673;
   letter-spacing: 1.2px;
 }
 .Nav_link a {
   cursor: pointer;
 }
+.Nav_link:hover,
+.Nav_link:focus {
+  color: rgb(10, 186, 181, 0.5);
+}
 
-@media (max-width: 768px) {
-  .Nav_link {
-    padding: 7px;
-    font-size: 10px;
-  }
+@media (max-width: 810px) {
   .Dropdown {
-    top: 30px;
+    top: 1.5rem;
+  }
+  .Nav_link {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .Dropdown {
+    top: 3.5rem;
+    left: 0;
+    width: 5.1rem;
+    margin: 0;
+    padding: 0.1rem 0.5rem;
+  }
+  .Nav_link {
+    font-size: 0.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0.5em 0;
   }
 }

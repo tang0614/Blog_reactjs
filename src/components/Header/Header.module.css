@@ -2,17 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0px 0.5rem;
 }
 
 .Nav_link {
   display: inline-block;
-  padding: 1em;
-  margin: 1em;
+  padding: 0.8em;
+  margin: 0.8em;
   text-decoration: none;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #565673;
-  letter-spacing: 1.2px;
+  letter-spacing: 2px;
 }
 
 .Nav_link:hover {
@@ -21,15 +22,16 @@
 
 .SocialBar {
   display: inline-block;
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.8rem;
+  margin: 0.8rem;
   color: "black";
 }
 
-@media (max-width: 768px) {
+@media (max-width: 810px) {
   .Nav_link {
     font-size: 0.4rem;
   }
+
   .SocialBar {
     display: inline-block;
     padding: 0.4em;
@@ -37,7 +39,7 @@
   }
 }
 
-@media (max-width: 280px) {
+@media (max-width: 570px) {
   .Nav_link {
     font-size: 0.2rem;
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 import Classes from "./App.module.css";
 import Header from "./components/Header/Header";
@@ -20,6 +20,13 @@ const AsyncAbout = AsyncCompo(() => {
   return import("./containers/About/About");
 });
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+    return;
+  }, []);
+
   return (
     <div className={Classes.App}>
       <Header />
@@ -29,7 +36,6 @@ function App() {
         <Route exact path="/contact" component={AsyncContact} />
         <Route exact path="/cake/:postId" component={AsyncCake} />
         <Route exact path="/cake" component={AsyncCake} />
-
         <Route exact path="/about" component={AsyncAbout} />
       </Switch>
     </div>
