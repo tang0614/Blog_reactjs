@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import axios from "axios";
 import Classes from "./Contact.module.css";
 
 class Contact extends Component {
@@ -18,7 +18,16 @@ class Contact extends Component {
     event.preventDefault();
     if (this.submitValidation()) {
       this.setState({ error: "" });
-      alert("Submit successfully ! We will reach you back later");
+      axios
+        .post("/api/contact", {
+          email: this.state.email.value,
+          message: this.state.message.value,
+        })
+        .then(() => console.log("successfully posted"))
+        .then((err) => {
+          return { message: err };
+        });
+      alert("Submit successfully ! I will reach you back later");
       this.props.history.replace("/");
     } else {
       this.setState({ error: "Please enter valid email / message" });

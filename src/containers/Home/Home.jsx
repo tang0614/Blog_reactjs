@@ -1,56 +1,49 @@
 import Classes from "./Home.module.css";
-// import ImageGrid from "../../components/ImageGrid/ImageGrid";
-// import ImageLoading from "../../components/ImageLoading/ImageLoading";
-// import useFirestore from "../../hook/useFirestore";
 
 import React, { Component } from "react";
 import SideBar from "../../components/SideBar/SideBar";
+import Project from "../../components/Project/Project";
+import http from "../../httpService";
+import SmallProject from "../SmallProject/SmallProject";
+import { useState } from "react";
+import { useEffect } from "react";
 
-class Home extends Component {
-  render() {
-    return (
-      <div className={Classes.Home}>
-        {/* <ImageLoading />
-        <ImageGrid /> */}
+const Home = (props) => {
+  const [projects, setProjects] = useState([]);
 
-        <main className={Classes.Main}>
-          <article className={Classes.Article}>
-            <div className={Classes.ArticleMain}>
-              <strong>Keep cooking simple</strong>
-              <p>
-                Food is very important part of everyone's life. If you want to
-                be health, you have to eat healthy. One of the easiest ways to
-                do that is to keep your cooking nice.
-              </p>
-              <a className={Classes.ArticleAnchor}>Continue Reading</a>
-            </div>
-            <div className={Classes.ArticleSecondary}>
-              <img
-                src={require(`../../image/Cooking.png`)}
-                className={Classes.ArticleImage}
+  useEffect(() => {
+    console.log("component did mount/updated");
+    http
+      .get("/api")
+      .then((res) => {
+        console.log("Home res.data is", res.data);
+        setProjects(res.data);
+      })
+      .catch((err) => {
+        return { message: err };
+      });
+  }, []);
+
+  console.log("projects is", projects);
+
+  return (
+    <div className={Classes.Home}>
+      <main className={Classes.Main}>
+        {projects
+          ? projects.map((project, id) => (
+              <Project
+                key={id}
+                links={project.links}
+                article={project.article}
               />
-              <div className={Classes.Button}>
-                <button className={Classes.Text}>Live</button>
-                <button className={Classes.Text}>Github</button>
-              </div>
-
-              <div>
-                <p>React</p>
-                <p>Redux</p>
-                <p>Nodejs</p>
-                <p>Express</p>
-                <p>Mongodb</p>
-              </div>
-            </div>
-          </article>
-        </main>
-
-        <aside className={Classes.Side}>
-          <SideBar />
-        </aside>
-      </div>
-    );
-  }
-}
+            ))
+          : ""}
+      </main>
+      <aside className={Classes.Side}>
+        <SideBar />
+      </aside>
+    </div>
+  );
+};
 
 export default Home;

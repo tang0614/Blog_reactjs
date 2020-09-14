@@ -3,10 +3,14 @@ import React, { Component } from "react";
 import Nav from "../common/nav";
 
 const link = [
-  { name: "Chocolate", path: "/cake/chocolate", type: "search" },
-  { name: "Apple", path: "/cake/apple", type: "search" },
-  { name: "Caramel", path: "/cake/caramel", type: "search" },
-  { name: "Pineapple", path: "/cake/pineapple", type: "search" },
+  { name: "Music Player", path: "/side/music", type: "search" },
+  {
+    name: "Calculator",
+    path: "/side/calculator",
+    type: "search",
+  },
+  { name: "Login Form", path: "/side/form", type: "search" },
+  { name: "Reddit Search", path: "/side/search", type: "search" },
 ];
 
 class Dropdown extends Component {

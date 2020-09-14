@@ -1,23 +1,24 @@
 import React from "react";
-import Card from "../common/card";
+import { Link } from "react-router-dom";
 import Classes from "./Post.module.css";
-import PostContent from "../common/postContent";
-import PostHeader from "../common/postHeader";
 
 const Post = (props) => {
-  const { category, title, imageLocation, by, content } = props.post;
+  const { title, description, section, _id } = props;
 
   return (
-    <Card style={Classes.Card}>
-      <PostHeader category={category} title={title} by={by} />
-      <div className={Classes.Wrap}>
-        <img
-          className={Classes.Img}
-          src={require(`../../image/${imageLocation}.jpg`)}
-        />
+    <article className={Classes.Article}>
+      <div className={Classes.ArticleMain}>
+        <strong>{title}</strong>
+        <div>
+          <em>Xinyu Tang | 2020</em>
+        </div>
+        <p>{description}</p>
+
+        <Link className={Classes.ArticleAnchor} to={`./posts/${_id}`}>
+          Continue Reading
+        </Link>
       </div>
-      <PostContent content={content} />
-    </Card>
+    </article>
   );
 };
 

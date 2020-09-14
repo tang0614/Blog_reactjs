@@ -1,1 +1,0 @@
-{"version":3,"sources":["Contact.module.css"],"names":[],"mappings":"AAAA,wBACE,YACF,CAEA,yBACE,wBACE,WACF,CACF","file":"6.3714cb21.chunk.css","sourcesContent":[".Contact {\n  margin: 100px;\n}\n\n@media (max-width: 768px) {\n  .Contact {\n    margin: 20px;\n  }\n}\n"]}

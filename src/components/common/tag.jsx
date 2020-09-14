@@ -5,15 +5,15 @@ import Classes from "./style.module.css";
 import Dropdown from "../Dropdown/Dropdown";
 
 const Tag = (props) => {
-  const Tag_classes = props.name === "ByIngredient" ? "Tag_Ingredient" : null;
+  const Tag_classes = props.name === "Small Projects" ? "Tag_Ingredient" : null;
   const type = props.type === "search" ? "search" : "other";
   const changeDropdown =
-    !props.isDrop && props.name === "ByIngredient"
+    !props.isDrop && props.name === "Small Projects"
       ? props.changeDropdown
       : null;
 
   const removeDropdown =
-    !props.isDrop && props.name === "ByIngredient"
+    !props.isDrop && props.name === "Small Projects"
       ? props.removeDropdown
       : null;
 
@@ -30,7 +30,7 @@ const Tag = (props) => {
       >
         <i>{props.name}</i>
         {Tag_classes && <i className="fas fa-caret-down" />}
-        {props.name === "ByIngredient" && (
+        {props.name === "Small Projects" && (
           <Dropdown showDropdown={props.showDropdown} />
         )}
       </span>

@@ -3,34 +3,51 @@ import Card from "../common/card";
 import Classes from "./SideBar.module.css";
 import InstCard from "../common/InstCard";
 import Nav from "../common/nav";
-import cakeData from "../../data/cake.json";
 
-const posts = cakeData.data;
-
-const link = posts.map((post) => {
-  return {
-    name: post.title,
-    path: `/cake/${post.id}`,
-  };
-});
+import { useEffect } from "react";
+import axios from "axios";
+import { useState } from "react";
 
 const info = {
   about_card: {
     name: "About",
     path: "/about",
-    imageLocation: "me",
-    content: "I am a shiba inu and my hobby is baking! Join with me!",
+    imageLocation: "about",
+    content: "Listen to my story!",
   },
   contact_card: {
     contact_name: "Contact",
     contact_path: "/contact",
-    contact_imageLocation: "contact",
+    contact_imageLocation: "me",
     contact_content: "Email: xinyu.tang0614@gmail.com",
   },
 };
 
 const SideBar = (props) => {
   const { name, path, content, imageLocation } = info.about_card;
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/api/posts")
+      .then((res) => {
+        console.log("Sidebar res.data is", res.data);
+        setPosts(res.data);
+      })
+      .catch((err) => {
+        return { message: err };
+      });
+  }, []);
+
+  const link = posts
+    ? posts.map((post) => {
+        return {
+          name: post.title,
+          path: `/posts/${post._id}`,
+        };
+      })
+    : "";
+
   const {
     contact_name,
     contact_path,
@@ -52,7 +69,7 @@ const SideBar = (props) => {
       </Card>
 
       <Card style={Classes.Card}>
-        <h3 className={Classes.SideBar}>{"Other Posts"}</h3>
+        <strong className={Classes.SideBar}>{"Other Posts"}</strong>
         <Nav link={link} nav_link_style={Classes.Nav_link} />
       </Card>
 

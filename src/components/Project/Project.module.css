@@ -4,7 +4,7 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   border-bottom: 0.1rem solid #f0f0f0;
 }
 
@@ -16,14 +16,12 @@
 }
 
 .ArticleMain p {
-  padding: 1rem;
   font-size: 0.8rem;
 }
 .ArticleAnchor {
   display: block;
   font-size: 0.5rem;
   font-weight: 500;
-  background-color: transparent;
   color: rgb(10, 186, 181);
 
   border: transparent;
@@ -35,10 +33,50 @@
   color: rgb(10, 186, 181, 0.5);
 }
 
+.ArticleSecondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+
+  padding: 1em;
+
+  position: relative;
+}
+
 .ArticleImage {
   max-width: 100%;
   display: block;
   opacity: 0.3;
+}
+
+.Button {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.ArticleSecondary p {
+  font-size: 0.6rem;
+  margin-top: 1rem;
+}
+
+.Text {
+  font-size: 0.8rem;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 10%;
+  letter-spacing: 1px;
+  background-color: rgb(10, 186, 181, 0.7);
+}
+.Text:focus,
+.Text:hover {
+  outline: 0;
+  box-shadow: none;
+  color: #fff;
 }
 
 @media (min-width: 570px) {
@@ -57,5 +95,22 @@
   .ArticleAnchor {
     font-size: 1rem;
     font-weight: 600;
+  }
+
+  .ArticleSecondary {
+    width: 70%;
+  }
+
+  .ArticleSecondary p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 810px) {
+  .ArticleSecondary {
+    width: 60%;
+  }
+  .Text {
+    font-size: 1rem;
   }
 }

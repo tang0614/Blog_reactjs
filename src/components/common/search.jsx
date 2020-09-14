@@ -5,11 +5,17 @@ const Search = (props) => {
     <form className={props.style} onSubmit={props.onSubmit}>
       <button
         type="submit"
-        style={{ padding: 0, margin: 0, border: "none", outline: "none" }}
+        style={{
+          padding: 0,
+          margin: 0,
+          border: "none",
+          outline: "none",
+          backgroundColor: "transparent",
+        }}
       >
         <img
-          src={require("../../image/search.png")}
-          height="21px"
+          src={window.location.origin + "/image/search.png"}
+          height="20px"
           style={{ padding: 0, margin: 0 }}
         />
       </button>

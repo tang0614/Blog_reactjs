@@ -6,10 +6,10 @@ import Nav from "../../components/common/nav";
 import Search from "../../components/common/search";
 import { withRouter, Route, Redirect } from "react-router-dom";
 import AsyncCompo from "../../hoc/asyncCompo";
-import cakeData from "../../data/cake.json";
+import http from "../../httpService";
 
-const AsyncIngredient = AsyncCompo(() => {
-  return import("../Ingredient/Ingredient");
+const AsyncPosts = AsyncCompo(() => {
+  return import("../Posts/Posts");
 });
 
 class Hero extends Component {
@@ -20,45 +20,50 @@ class Hero extends Component {
     showDropdown: false,
     link: [
       { name: "Portfolio", path: "/" },
-      { name: "Posts", path: "/cake" },
-      { name: "ByIngredient", path: `/cake` },
+      { name: "Posts", path: "/posts" },
+      { name: "Small Projects", path: `/side` },
     ],
     filteredLink: [],
     showButton: false,
   };
 
   componentWillMount() {
-    const posts = cakeData.data;
-    this.setState({ posts });
+    console.log("component did mount");
+    http
+      .get("/api/posts")
+      .then((res) => this.setState({ posts: res.data }))
+      .catch((err) => {
+        return { message: err };
+      });
   }
 
-  getPost = (category, id) => {
-    const posts = this.state.posts;
-    const postId = id;
-    const cat = category;
+  // getPost = (category, id) => {
+  //   const posts = this.state.posts;
+  //   const postId = id;
+  //   const cat = category;
 
-    let post = null;
-    const found = posts.find(
-      (post) => post.id === postId && post.category === cat
-    );
-    if (found) {
-      post = {
-        category: found.category,
-        title: found.title,
-        by: found.by,
-        imageLocation: found.imageLocation,
-        content: found.content,
-      };
-    } else {
-      post = this.state.post;
-    }
+  //   let post = null;
+  //   const found = posts.find(
+  //     (post) => post.id === postId && post.category === cat
+  //   );
+  //   if (found) {
+  //     post = {
+  //       category: found.category,
+  //       title: found.title,
+  //       by: found.by,
+  //       content: found.content,
+  //     };
+  //   } else {
+  //     post = this.state.post;
+  //   }
 
-    this.setState({ post });
-  };
+  //   this.setState({ post });
+  // };
 
   filterLink = () => {
     const ingredient = this.state.value;
     const posts = [...this.state.posts];
+
     const titles = posts.map((post) => post.title);
     const p = Array.from(ingredient).reduce(
       (a, v, i) => `${a}[^${ingredient.toLowerCase().substr(i)}]*?${v}`,
@@ -66,6 +71,7 @@ class Hero extends Component {
     );
     const re = RegExp(p);
     const filteredTitle = titles.filter((item) => item.toLowerCase().match(re));
+
     let filteredPosts = filteredTitle.map((title) => {
       return posts.filter((item) => item.title === title);
     });
@@ -73,16 +79,18 @@ class Hero extends Component {
 
     const filteredLink = filteredPosts.map((post) => {
       return {
-        name: post.title,
-        path: `/cake/${post.id}`,
-        imageLocation: post.imageLocation,
+        title: post.title,
+        description: post.description,
+        section: post.section,
+        path: `/posts/${post._id}`,
         type: "search",
       };
     });
 
-    this.setState({ filteredLink });
+    this.setState({ posts: filteredLink });
     this.setState({ value: "" });
-    this.props.history.push("/ingredient");
+
+    this.props.history.push("/posts");
   };
 
   selectIngredient = (ingredient) => {
@@ -120,6 +128,7 @@ class Hero extends Component {
   };
 
   render() {
+    console.log("filtered link", this.state.filteredLink);
     return (
       <div>
         <Card style={Classes.Card}>
@@ -158,8 +167,8 @@ class Hero extends Component {
         <div>
           <Route
             exact
-            path="/ingredient"
-            render={() => <AsyncIngredient link={this.state.filteredLink} />}
+            path="/posts"
+            render={() => <AsyncPosts posts={this.state.posts} />}
           />
         </div>
       </div>

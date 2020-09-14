@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Classes from "./App.module.css";
 import Header from "./components/Header/Header";
@@ -7,10 +7,10 @@ import Home from "./containers/Home/Home";
 import AsyncCompo from "./hoc/asyncCompo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const AsyncCake = AsyncCompo(() => {
-  return import("./containers/Cake/Cake");
-});
+import Posts from "./containers/Posts/Posts";
+import PostContent from "./components/PostContent/PostContent";
+import SmallProject from "./containers/SmallProject/SmallProject";
+require("dotenv").config();
 
 const AsyncContact = AsyncCompo(() => {
   return import("./containers/Contact/Contact");
@@ -20,23 +20,16 @@ const AsyncAbout = AsyncCompo(() => {
   return import("./containers/About/About");
 });
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-    return;
-  }, []);
-
   return (
     <div className={Classes.App}>
       <Header />
       <Hero />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/posts/:_id" component={PostContent} />
         <Route exact path="/contact" component={AsyncContact} />
-        <Route exact path="/cake/:postId" component={AsyncCake} />
-        <Route exact path="/cake" component={AsyncCake} />
         <Route exact path="/about" component={AsyncAbout} />
+        <Route exact path="/side/:name" component={SmallProject} />
       </Switch>
     </div>
   );

@@ -1,0 +1,55 @@
+.Post {
+  width: 95%;
+  padding: 0;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Main {
+  background: #fff;
+  padding: 1rem 0;
+}
+
+.Main strong {
+  font-size: 1.1rem;
+}
+.Title {
+  text-align: center;
+}
+.Content {
+  font-size: 1rem;
+  margin: 0 1em;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+}
+.Img {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+@media (min-width: 570px) {
+  .Post {
+    flex-direction: row;
+  }
+  .Main {
+    background: #fff;
+    width: 72%;
+    padding: 2rem;
+  }
+  .Main strong {
+    font-size: 1.5rem;
+  }
+
+  .Side {
+    width: 25%;
+  }
+  .Content {
+    font-size: 1.2rem;
+    margin: 0 1em;
+    line-height: 2rem;
+  }
+}

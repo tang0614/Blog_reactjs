@@ -1,15 +1,39 @@
 .About {
-  margin: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
 }
 
 .Container {
-  margin: 30px;
+  font-size: 1.2rem;
+  width: 40%;
+  letter-spacing: 0.05rem;
 }
+
+.Image {
+  width: 50%;
+}
+
+.Image img {
+  display: block;
+  width: 100%;
+}
+
 @media (max-width: 810px) {
   .About {
-    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
   .Container {
-    margin: 20px;
+    width: 80%;
+  }
+  .Image {
+    padding: 1rem;
+    width: 60%;
   }
 }

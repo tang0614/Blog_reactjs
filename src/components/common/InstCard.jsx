@@ -8,7 +8,7 @@ const InstCard = (props) => {
       <Tag {...props} nav_link_style={Classes.Nav_link} />
       <img
         className={Classes.Img}
-        src={require(`../../image/${props.imageLocation}.jpg`)}
+        src={window.location.origin + `/image/${props.imageLocation}.jpg`}
       />
       <p className={Classes.Intro}>{props.content}</p>
     </div>

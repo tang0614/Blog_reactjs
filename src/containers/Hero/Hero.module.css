@@ -73,12 +73,7 @@
   .Nav_link {
     font-size: 0.8rem;
   }
-  .Search {
-    font-size: 0.8rem;
-    margin: 1em;
-  }
 }
-
 @media (max-width: 570px) {
   .Logo {
     font-size: 1rem;
@@ -91,9 +86,7 @@
   .Nav_link {
     display: none;
   }
-  .Search {
-    display: none;
-  }
+
   .Nav_2 {
     position: absolute;
     bottom: -4.2rem;
@@ -134,5 +127,9 @@
   .Button:focus {
     color: rgb(10, 186, 181, 0.5);
     outline: none;
+  }
+  .Search {
+    font-size: 0.5rem;
+    margin: 1em;
   }
 }
