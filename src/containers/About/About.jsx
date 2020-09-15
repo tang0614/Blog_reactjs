@@ -11,7 +11,7 @@ const About = () => {
         </div>
 
         <div className={Classes.Container}>
-          <h3>Something About Me</h3>
+          <h4>Something About Me</h4>
           <p>
             I am going to graduate in December 2020 with a degree of data
             science from Northeastern University, and my last internship

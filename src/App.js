@@ -7,9 +7,11 @@ import Home from "./containers/Home/Home";
 import AsyncCompo from "./hoc/asyncCompo";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Posts from "./containers/Posts/Posts";
+
 import PostContent from "./components/PostContent/PostContent";
 import SmallProject from "./containers/SmallProject/SmallProject";
+import Posts from "./containers/Posts/Posts";
+
 require("dotenv").config();
 
 const AsyncContact = AsyncCompo(() => {
@@ -26,10 +28,12 @@ function App() {
       <Hero />
       <Switch>
         <Route exact path="/" component={Home} />
+
         <Route exact path="/posts/:_id" component={PostContent} />
+        <Route exact path="/posts" component={Posts} />
         <Route exact path="/contact" component={AsyncContact} />
         <Route exact path="/about" component={AsyncAbout} />
-        <Route exact path="/side/:name" component={SmallProject} />
+        <Route exact path="/side/:_id" component={SmallProject} />
       </Switch>
     </div>
   );

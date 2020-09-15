@@ -1,9 +1,15 @@
 .Contact {
-  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+  width: 70%;
+  height: 100vh;
 }
 
-@media (max-width: 810px) {
+@media (min-width: 810px) {
   .Contact {
-    margin: 20px;
+    margin: 3rem auto;
+    width: 50%;
   }
 }

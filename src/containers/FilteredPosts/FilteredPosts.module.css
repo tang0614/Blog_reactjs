@@ -1,0 +1,36 @@
+.Posts {
+  width: 95%;
+  padding: 0;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Main {
+  background: #fff;
+}
+
+.Notes {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1em;
+}
+
+@media (min-width: 570px) {
+  .Posts {
+    flex-direction: row;
+  }
+  .Main {
+    background: #fff;
+    width: 72%;
+  }
+  .Side {
+    width: 25%;
+  }
+  .Notes {
+    font-size: 1.5rem;
+  }
+}

@@ -31,7 +31,6 @@ const SideBar = (props) => {
     axios
       .get("/api/posts")
       .then((res) => {
-        console.log("Sidebar res.data is", res.data);
         setPosts(res.data);
       })
       .catch((err) => {

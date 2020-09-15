@@ -6,31 +6,19 @@
   flex-direction: column;
   align-items: center;
   border-bottom: 0.1rem solid #f0f0f0;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .ArticleMain {
   width: 100%;
 }
-.ArticleMain strong {
+.Title {
+  text-align: center;
   font-size: 1.3rem;
 }
 
 .ArticleMain p {
-  font-size: 0.8rem;
-}
-.ArticleAnchor {
-  display: block;
-  font-size: 0.5rem;
-  font-weight: 500;
-  color: rgb(10, 186, 181);
-
-  border: transparent;
-  outline: none;
-}
-
-.ArticleAnchor:hover,
-.ArticleAnchor:focus {
-  color: rgb(10, 186, 181, 0.5);
+  font-size: 1rem;
 }
 
 .ArticleSecondary {
@@ -45,17 +33,33 @@
 }
 
 .ArticleImage {
+  display: block;
+  opacity: 0.8;
+  max-height: 9.5rem;
   max-width: 100%;
+  z-index: 0;
+}
+
+.ArticleSecondary:hover .ArticleImage {
   display: block;
   opacity: 0.3;
+  max-height: 9.5rem;
+  max-width: 100%;
 }
 
 .Button {
   position: absolute;
   top: 50%;
+
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+
+  opacity: 0;
+}
+
+.ArticleSecondary:hover .Button {
+  opacity: 1;
 }
 
 .ArticleSecondary p {
@@ -70,13 +74,18 @@
   border: none;
   border-radius: 10%;
   letter-spacing: 1px;
-  background-color: rgb(10, 186, 181, 0.7);
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  background-color: rgb(10, 186, 181, 0.8);
 }
 .Text:focus,
 .Text:hover {
   outline: 0;
   box-shadow: none;
   color: #fff;
+}
+
+.ArticleImage:hover + .Button {
+  visibility: visible;
 }
 
 @media (min-width: 570px) {
@@ -92,11 +101,6 @@
     font-size: 1.1rem;
   }
 
-  .ArticleAnchor {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
   .ArticleSecondary {
     width: 70%;
   }
@@ -104,9 +108,17 @@
   .ArticleSecondary p {
     font-size: 1rem;
   }
+  .ArticleImage {
+    max-height: 10rem;
+  }
 }
 
 @media (min-width: 810px) {
+  .Title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
   .ArticleSecondary {
     width: 60%;
   }

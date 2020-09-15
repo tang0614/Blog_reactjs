@@ -14,7 +14,7 @@ const PostContent = (props) => {
       .catch((err) => {
         return { message: err };
       });
-  }, []);
+  }, [post]);
 
   return (
     <div className={Classes.Post}>
@@ -25,7 +25,10 @@ const PostContent = (props) => {
         {post
           ? post.section.map((element, id) => {
               return (
-                <div key={id}>
+                <div className={Classes.Section} key={id}>
+                  <strong className={Classes.Content}>
+                    {element.subTitile}
+                  </strong>
                   <p className={Classes.Content}>{element.content}</p>
                   <img
                     alt={element.imageSource}

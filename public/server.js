@@ -4,6 +4,7 @@ const winston = require("winston");
 const morgan = require("morgan");
 const Contact = require("./mongodb/contact");
 const Project = require("./mongodb/project");
+const Side = require("./mongodb/side");
 const Post = require("./mongodb/post");
 const Section = require("./mongodb/section");
 require("./db")();
@@ -27,6 +28,11 @@ app.get("/api/posts/:_id", async (req, res) => {
   res.status(200).send(data);
 });
 
+app.get("/api/side/:_id", async (req, res) => {
+  const data = await Side.findById(req.params._id);
+  res.status(200).send(data);
+});
+
 app.get("/api/sections", async (req, res) => {
   const data = await Section.find();
   res.status(200).send(data);
@@ -35,6 +41,28 @@ app.get("/api/sections", async (req, res) => {
 app.get("/api", async (req, res) => {
   const data = await Project.find();
   res.status(200).send(data);
+});
+
+app.post("/api", async (req, res) => {
+  const project = new Project({
+    article: req.body.article,
+    links: req.body.links,
+  });
+
+  await project.save();
+
+  res.send(project);
+});
+
+app.post("/api/side", async (req, res) => {
+  const side = new Side({
+    article: req.body.article,
+    links: req.body.links,
+  });
+
+  await side.save();
+
+  res.send(side);
 });
 
 app.post("/api/sections", async (req, res) => {
@@ -83,7 +111,7 @@ app.put("/api/posts/:_id", async (req, res) => {
       $push: {
         section: {
           _id: section._id,
-          subTitle: section.name,
+          subTitile: section.subTitile,
           content: section.content,
           imageSource: section.imageSource,
         },

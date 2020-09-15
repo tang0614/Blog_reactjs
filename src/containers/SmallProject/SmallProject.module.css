@@ -1,0 +1,26 @@
+.Project {
+  width: 95%;
+  padding: 0;
+  margin: 1rem auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Main {
+  background: #fff;
+}
+
+@media (min-width: 570px) {
+  .Project {
+    flex-direction: row;
+  }
+  .Main {
+    background: #fff;
+    width: 72%;
+  }
+  .Side {
+    width: 25%;
+  }
+}

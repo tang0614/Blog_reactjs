@@ -9,13 +9,13 @@ import AsyncCompo from "../../hoc/asyncCompo";
 import http from "../../httpService";
 
 const AsyncPosts = AsyncCompo(() => {
-  return import("../Posts/Posts");
+  return import("../FilteredPosts/FilteredPosts");
 });
 
 class Hero extends Component {
   state = {
     posts: "",
-    post: "",
+
     value: "",
     showDropdown: false,
     link: [
@@ -23,7 +23,7 @@ class Hero extends Component {
       { name: "Posts", path: "/posts" },
       { name: "Small Projects", path: `/side` },
     ],
-    filteredLink: [],
+    filteredLink: "",
     showButton: false,
   };
 
@@ -36,29 +36,6 @@ class Hero extends Component {
         return { message: err };
       });
   }
-
-  // getPost = (category, id) => {
-  //   const posts = this.state.posts;
-  //   const postId = id;
-  //   const cat = category;
-
-  //   let post = null;
-  //   const found = posts.find(
-  //     (post) => post.id === postId && post.category === cat
-  //   );
-  //   if (found) {
-  //     post = {
-  //       category: found.category,
-  //       title: found.title,
-  //       by: found.by,
-  //       content: found.content,
-  //     };
-  //   } else {
-  //     post = this.state.post;
-  //   }
-
-  //   this.setState({ post });
-  // };
 
   filterLink = () => {
     const ingredient = this.state.value;
@@ -80,6 +57,7 @@ class Hero extends Component {
     const filteredLink = filteredPosts.map((post) => {
       return {
         title: post.title,
+        _id: post._id,
         description: post.description,
         section: post.section,
         path: `/posts/${post._id}`,
@@ -87,10 +65,10 @@ class Hero extends Component {
       };
     });
 
-    this.setState({ posts: filteredLink });
+    this.setState({ filteredLink });
     this.setState({ value: "" });
 
-    this.props.history.push("/posts");
+    this.props.history.push("/filtered");
   };
 
   selectIngredient = (ingredient) => {
@@ -128,11 +106,11 @@ class Hero extends Component {
   };
 
   render() {
-    console.log("filtered link", this.state.filteredLink);
     return (
       <div>
         <Card style={Classes.Card}>
           <Logo style={Classes.Logo} />
+
           <Nav
             link={this.state.link}
             nav_link_style={Classes.Nav_link}
@@ -141,6 +119,7 @@ class Hero extends Component {
             changeDropdown={this.changeDropdown}
             removeDropdown={this.removeDropdown}
           />
+
           <Search
             style={Classes.Search}
             inputStyle={Classes.SearchInput}
@@ -152,23 +131,27 @@ class Hero extends Component {
           <button className={Classes.Button} onClick={this.changeButton}>
             <i className="fa fa-align-justify"></i>
             {this.state.showButton ? (
-              <Nav
-                link={this.state.link}
-                nav_link_style={Classes.Nav_link_2}
-                nav_style={Classes.Nav_2}
-                showDropdown={this.state.showDropdown}
-                changeDropdown={this.changeDropdown}
-                removeDropdown={this.removeDropdown}
-              />
-            ) : null}
+              <div>
+                <Nav
+                  link={this.state.link}
+                  nav_link_style={Classes.Nav_link_2}
+                  nav_style={Classes.Nav_2}
+                  showDropdown={this.state.showDropdown}
+                  changeDropdown={this.changeDropdown}
+                  removeDropdown={this.removeDropdown}
+                />
+              </div>
+            ) : (
+              ""
+            )}
           </button>
         </Card>
 
         <div>
           <Route
             exact
-            path="/posts"
-            render={() => <AsyncPosts posts={this.state.posts} />}
+            path="/filtered"
+            render={() => <AsyncPosts filteredLink={this.state.filteredLink} />}
           />
         </div>
       </div>

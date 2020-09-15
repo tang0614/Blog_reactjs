@@ -16,15 +16,12 @@ const Home = (props) => {
     http
       .get("/api")
       .then((res) => {
-        console.log("Home res.data is", res.data);
         setProjects(res.data);
       })
       .catch((err) => {
         return { message: err };
       });
   }, []);
-
-  console.log("projects is", projects);
 
   return (
     <div className={Classes.Home}>

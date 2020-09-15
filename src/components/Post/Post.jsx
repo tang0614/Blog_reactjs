@@ -8,13 +8,13 @@ const Post = (props) => {
   return (
     <article className={Classes.Article}>
       <div className={Classes.ArticleMain}>
-        <strong>{title}</strong>
-        <div>
+        <div className={Classes.Title}>{title}</div>
+        <div className={Classes.Author}>
           <em>Xinyu Tang | 2020</em>
         </div>
         <p>{description}</p>
 
-        <Link className={Classes.ArticleAnchor} to={`./posts/${_id}`}>
+        <Link className={Classes.ArticleAnchor} to={`/posts/${_id}`}>
           Continue Reading
         </Link>
       </div>

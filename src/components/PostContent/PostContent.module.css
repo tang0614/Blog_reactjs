@@ -2,6 +2,7 @@
   width: 95%;
   padding: 0;
   margin: 1rem auto;
+  font-family: "Open Sans Condensed", sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -13,12 +14,15 @@
   padding: 1rem 0;
 }
 
-.Main strong {
-  font-size: 1.1rem;
+.Section {
+  margin: 1em 0;
 }
+
 .Title {
   text-align: center;
+  font-size: 1.2rem;
 }
+
 .Content {
   font-size: 1rem;
   margin: 0 1em;
@@ -40,7 +44,9 @@
     width: 72%;
     padding: 2rem;
   }
-  .Main strong {
+
+  .Title {
+    text-align: center;
     font-size: 1.5rem;
   }
 

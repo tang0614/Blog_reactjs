@@ -3,14 +3,31 @@ import React, { Component } from "react";
 import Nav from "../common/nav";
 
 const link = [
-  { name: "Music Player", path: "/side/music", type: "search" },
   {
-    name: "Calculator",
-    path: "/side/calculator",
+    name: "Reddit Search",
+    path: "/side/5f601107be79fc001711e83a",
     type: "search",
   },
-  { name: "Login Form", path: "/side/form", type: "search" },
-  { name: "Reddit Search", path: "/side/search", type: "search" },
+  {
+    name: "Tetris Game",
+    path: "/side/5f600fabbe79fc001711e839",
+    type: "search",
+  },
+  {
+    name: "Music Player",
+    path: "/side/5f600c4c9260c80017571a5d",
+    type: "search",
+  },
+  {
+    name: "Calculator",
+    path: "/side/5f600efebe79fc001711e838",
+    type: "search",
+  },
+  {
+    name: "Login Form",
+    path: "/side/5f6011c6be79fc001711e83b",
+    type: "search",
+  },
 ];
 
 class Dropdown extends Component {
@@ -20,7 +37,12 @@ class Dropdown extends Component {
       : "DropdownClicked";
     return (
       <div className={Classes[dropClasses]}>
-        <Nav link={link} nav_link_style={Classes.Nav_link} isDrop={true} />
+        <Nav
+          link={link}
+          nav_link_style={Classes.Nav_link}
+          nav_style={Classes.Nav}
+          isDrop={true}
+        />
       </div>
     );
   }

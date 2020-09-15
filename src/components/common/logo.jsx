@@ -6,14 +6,17 @@ const Logo = (props) => {
   return (
     <div className={props.style}>
       <p style={{ textAlign: "left", margin: "10px" }}>
-        <span> Hi ! I am Xinyu Tang ,</span>{" "}
+        <span>Hi ! I am</span>
+        <span style={{ color: "rgb(10,186,181,0.7)" }}> Xinyu Tang,</span>{" "}
       </p>
       <p style={{ textAlign: "center", margin: "10px" }}>
-        <span style={{ color: "rgb(10,186,181,0.7)" }}>
-          {" "}
-          aspiring full-stack
-        </span>
-        <Typical loop={1} wrapper="b" steps={[" Web Developer", 3000]} />
+        <span> a </span>
+        {""}
+        <Typical
+          loop={1}
+          wrapper="b"
+          steps={["Soft Engineer", 3000, " Web Developer, and", 3000]}
+        />
       </p>
     </div>
   );

@@ -1,31 +1,26 @@
 .Dropdown {
   position: absolute;
-  top: 2rem;
+  top: 13rem;
+  left: 0rem;
 
-  background: white;
-  width: 7.5rem;
-
+  padding-top: 1rem;
   margin: 0;
-  padding-top: 0.8rem;
-
   list-style: none;
-  text-align: start;
-  z-index: 1;
+  z-index: 3;
+  background-color: #f8ea8c;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
 }
-
-.DropdownClicked {
-  display: none;
+.Nav {
+  padding: 0.5rem;
 }
-
 .Nav_link {
   display: block;
-  padding: 0.5rem 0.6rem;
-  margin: 0 auto;
-  text-decoration: none;
-
-  font-size: 0.8rem;
+  font-size: 1.5rem;
+  padding-bottom: 0.5em;
   color: #565673;
-  letter-spacing: 1.2px;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
 }
 .Nav_link a {
   cursor: pointer;
@@ -34,29 +29,17 @@
 .Nav_link:focus {
   color: rgb(10, 186, 181, 0.5);
 }
-
-@media (max-width: 810px) {
-  .Dropdown {
-    top: 1.5rem;
-  }
-  .Nav_link {
-    padding: 0.5rem;
-    font-size: 0.7rem;
-  }
+.DropdownClicked {
+  display: none;
 }
 
-@media (max-width: 570px) {
+@media (min-width: 570px) {
+}
+
+@media (min-width: 810px) {
   .Dropdown {
-    top: 4.5rem;
-    left: 0;
-    width: 5.1rem;
-    margin: 0;
-    padding: 0.1rem 0.5rem;
-  }
-  .Nav_link {
-    font-size: 0.5rem;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 0.5em 0;
+    top: 2rem;
+    left: 12rem;
+    padding: 1rem 0;
   }
 }

@@ -11,17 +11,26 @@
 .ArticleMain {
   width: 100%;
 }
-.ArticleMain strong {
-  font-size: 1.3rem;
+
+.Author {
+  display: block;
+  width: 100%;
+  text-align: end;
+  font-size: 0.5rem;
+}
+.Title {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .ArticleMain p {
   padding: 1rem;
   font-size: 0.8rem;
 }
+
 .ArticleAnchor {
   display: block;
-  font-size: 0.5rem;
+  font-size: 1rem;
   font-weight: 500;
   background-color: transparent;
   color: rgb(10, 186, 181);
@@ -55,7 +64,7 @@
   }
 
   .ArticleAnchor {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 }

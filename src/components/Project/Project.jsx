@@ -16,9 +16,8 @@ const Project = (props) => {
   return (
     <article className={Classes.Article}>
       <div className={Classes.ArticleMain}>
-        <strong>{title}</strong>
+        <p className={Classes.Title}>{title}</p>
         <p>{description}</p>
-        <a className={Classes.ArticleAnchor}>Continue Reading</a>
       </div>
       <div className={Classes.ArticleSecondary}>
         <img
@@ -27,17 +26,15 @@ const Project = (props) => {
         />
         <div className={Classes.Button}>
           <button className={Classes.Text} onClick={() => handleClick("live")}>
-            Live
+            View Live
           </button>
           <button
             className={Classes.Text}
             onClick={() => handleClick("github")}
           >
-            Github
+            View Code
           </button>
         </div>
-
-        <p>React | Redux | Nodejs | Express | Mongodb</p>
       </div>
     </article>
   );
