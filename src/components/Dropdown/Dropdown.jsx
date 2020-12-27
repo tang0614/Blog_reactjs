@@ -4,6 +4,16 @@ import Nav from "../common/nav";
 
 const link = [
   {
+    name: "Food Ordering Site",
+    path: "/side/5f600c4c9260c80017571a5d",
+    type: "search",
+  },
+  {
+    name: "Movie NoteBook",
+    path: "/side/5f600efebe79fc001711e838",
+    type: "search",
+  },
+  {
     name: "Reddit Search",
     path: "/side/5f601107be79fc001711e83a",
     type: "search",

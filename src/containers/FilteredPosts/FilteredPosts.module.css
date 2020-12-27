@@ -9,7 +9,7 @@
 }
 
 .Main {
-  background: #fff;
+  background: var(--clr-bcg-primary);
 }
 
 .Notes {
@@ -24,7 +24,7 @@
     flex-direction: row;
   }
   .Main {
-    background: #fff;
+    background: var(--clr-bcg-primary);
     width: 72%;
   }
   .Side {

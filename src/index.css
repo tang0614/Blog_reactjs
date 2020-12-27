@@ -1,0 +1,33 @@
+:root {
+  --clr-bcg-primary: #fff;
+  --clr-bcg-secondary: rgba(0, 0, 0, 0.87);
+  --clr-bcg-thirdly: #e9eaed;
+
+  --clr-font-primary: #282c35;
+  --clr-font-secondary: #565673;
+  --clr-font-thirdly: rgb(10, 186, 181, 0.8);
+
+  --clr--dropdown: #f8ea8c;
+}
+
+.dark-theme {
+  --clr-bcg-primary: #0e0e11;
+  --clr-bcg-secondary: #111028;
+  --clr-bcg-thirdly: #0d1019;
+
+  --clr-font-primary: #d4b483;
+  --clr-font-secondary: #d1c7ac;
+  --clr-font-thirdly: #fefaf7;
+
+  --clr--dropdown: #736c58;
+}
+.light-theme {
+  --clr-bcg-primary: #fff;
+  --clr-bcg-secondary: rgba(0, 0, 0, 0.87);
+  --clr-bcg-thirdly: #e9eaed;
+
+  --clr-font-primary: #282c35;
+  --clr-font-secondary: #565673;
+  --clr-font-thirdly: rgb(10, 186, 181, 0.8);
+  --clr--dropdown: #f8ea8c;
+}

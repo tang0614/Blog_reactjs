@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  border-bottom: 0.1rem solid #f0f0f0;
+  border-bottom: 0.1rem solid var(--clr-bcg-primary);
 }
 
 .ArticleMain {
@@ -16,16 +16,18 @@
   display: block;
   width: 100%;
   text-align: end;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 .Title {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  padding: 1em 0;
 }
 
 .ArticleMain p {
-  padding: 1rem;
-  font-size: 0.8rem;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  line-height: 1.5em;
 }
 
 .ArticleAnchor {
@@ -33,7 +35,7 @@
   font-size: 1rem;
   font-weight: 500;
   background-color: transparent;
-  color: rgb(10, 186, 181);
+  color: var(--clr-font-thirdly);
 
   border: transparent;
   outline: none;
@@ -41,7 +43,7 @@
 
 .ArticleAnchor:hover,
 .ArticleAnchor:focus {
-  color: rgb(10, 186, 181, 0.5);
+  color: var(--clr-font-thirdly);
 }
 
 .ArticleImage {
@@ -50,17 +52,23 @@
   opacity: 0.3;
 }
 
-@media (min-width: 570px) {
+@media (min-width: 810px) {
   .Article {
     padding: 2.5rem;
+  }
+  .Title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .ArticleMain p {
+    padding: 1rem;
+    font-size: 1.3rem;
+    line-height: 1.5em;
   }
 
   .ArticleMain strong {
     font-size: 1.6rem;
-  }
-
-  .ArticleMain p {
-    font-size: 1.1rem;
   }
 
   .ArticleAnchor {

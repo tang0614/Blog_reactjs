@@ -7,12 +7,14 @@ import Search from "../../components/common/search";
 import { withRouter, Route, Redirect } from "react-router-dom";
 import AsyncCompo from "../../hoc/asyncCompo";
 import http from "../../httpService";
+import { Link as Scroll } from "react-scroll";
 
 const AsyncPosts = AsyncCompo(() => {
   return import("../FilteredPosts/FilteredPosts");
 });
 
 class Hero extends Component {
+  
   state = {
     posts: "",
 
@@ -25,7 +27,12 @@ class Hero extends Component {
     ],
     filteredLink: "",
     showButton: false,
+    
   };
+
+
+
+  
 
   componentWillMount() {
     console.log("component did mount");
@@ -109,6 +116,8 @@ class Hero extends Component {
     return (
       <div>
         <Card style={Classes.Card}>
+        
+
           <Logo style={Classes.Logo} />
 
           <Nav
@@ -145,6 +154,11 @@ class Hero extends Component {
               ""
             )}
           </button>
+          <Scroll to="place-to-visit" smooth={true}>
+            <span className={Classes.Icon}>
+              <i className={"angle double down icon"}></i>
+            </span>
+          </Scroll>
         </Card>
 
         <div>

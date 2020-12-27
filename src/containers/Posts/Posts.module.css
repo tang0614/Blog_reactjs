@@ -9,7 +9,7 @@
 }
 
 .Main {
-  background: #fff;
+  background: var(--clr-bcg-primary);
 }
 
 @media (min-width: 570px) {
@@ -17,7 +17,7 @@
     flex-direction: row;
   }
   .Main {
-    background: #fff;
+    background: var(--clr-bcg-primary);
     width: 72%;
   }
   .Side {

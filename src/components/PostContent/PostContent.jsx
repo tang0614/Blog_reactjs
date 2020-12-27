@@ -26,10 +26,10 @@ const PostContent = (props) => {
           ? post.section.map((element, id) => {
               return (
                 <div className={Classes.Section} key={id}>
-                  <strong className={Classes.Content}>
-                    {element.subTitile}
-                  </strong>
-                  <p className={Classes.Content}>{element.content}</p>
+                  <div className={Classes.Content}>
+                    <div className={Classes.Subtitle}>{element.subTitile}</div>
+                    <p>{element.content}</p>
+                  </div>
                   <img
                     alt={element.imageSource}
                     className={Classes.Img}

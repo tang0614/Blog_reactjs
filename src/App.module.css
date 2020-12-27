@@ -13,6 +13,9 @@ body {
   margin: 0 auto;
   border: 1px solid transparent;
 
-  background-color: #e9eaed;
+  background-color: var(--clr-bcg-thirdly);
+  color: var(--clr-font-primary);
   font-family: "Open Sans Condensed", sans-serif;
+
+  padding: relative;
 }

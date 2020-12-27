@@ -1,23 +1,23 @@
 .Dropdown {
   position: absolute;
-  top: 13rem;
+  top: 9rem;
   left: 0rem;
 
   padding-top: 1rem;
   margin: 0;
   list-style: none;
   z-index: 3;
-  background-color: #f8ea8c;
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  background-color: var(--clr--dropdown);
+  box-shadow: 8px 8px 6px -6px var(--clr-font-primary);
 }
 .Nav {
   padding: 0.5rem;
 }
 .Nav_link {
   display: block;
-  font-size: 1.5rem;
-  padding-bottom: 0.5em;
-  color: #565673;
+  font-size: 1rem;
+  padding-bottom: 1em;
+  color: var(--clr-font-secondary);
   text-decoration: none;
   margin: 0;
   text-align: center;
@@ -27,7 +27,7 @@
 }
 .Nav_link:hover,
 .Nav_link:focus {
-  color: rgb(10, 186, 181, 0.5);
+  color: var(--clr-font-thirdly);
 }
 .DropdownClicked {
   display: none;
@@ -38,7 +38,7 @@
 
 @media (min-width: 810px) {
   .Dropdown {
-    top: 2rem;
+    top: 1.8rem;
     left: 12rem;
     padding: 1rem 0;
   }

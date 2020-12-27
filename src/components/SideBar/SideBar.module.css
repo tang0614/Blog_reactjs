@@ -1,9 +1,9 @@
 .Side {
-  background-color: #e9eaed;
+  background-color: var(--clr-bcg-primary);
   width: 100%;
 }
 .Card {
-  background-color: #fff;
+  background-color: var(--clr-bcg-primary);
   width: 100%;
   padding: 1.3rem;
   margin-bottom: 1.3rem;
@@ -18,8 +18,7 @@
   margin: 0 auto;
   text-decoration: none;
 
-  font-size: 0.8rem;
-  color: #565673;
+  color: var(--clr-font-secondary);
   letter-spacing: 1.2px;
   text-align: center;
 }
@@ -29,17 +28,17 @@
   width: 80%;
   padding: 1rem 0;
   margin: 0 auto;
-  border-bottom: 1px solid #e9eaed;
+  border-bottom: 1px solid var(--clr-bcg-primary);
   text-decoration: none;
 
-  font-size: 1.2rem;
-  color: #565673;
+  font-size: 1rem;
+  color: var(--clr-font-secondary);
   letter-spacing: 1.2px;
 }
 
 .Nav_link:hover,
 .Nav_link:focus {
-  color: rgb(10, 186, 181, 0.5);
+  color: var(--clr-font-thirdly);
 }
 
 /* browser window is 600px wide or less */
@@ -49,16 +48,9 @@
     margin-bottom: 0.6rem;
   }
 
-  .SideBar {
-    font-size: 0.6rem;
-  }
-
   .Nav_link {
     padding: 1em 0;
-    border-bottom: 1px solid #e9eaed;
+    border-bottom: 1px solid var(--clr-bcg-primary);
     font-size: 1rem;
-  }
-  .Card strong {
-    font-size: 1.2rem;
   }
 }

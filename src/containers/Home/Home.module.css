@@ -9,7 +9,14 @@
 }
 
 .Main {
-  background: #fff;
+  background: var(--clr-bcg-primary);
+}
+
+.Title {
+  font-size: 1.5rem;
+  padding: 1em 0;
+  text-align: center;
+  font-weight: 500;
 }
 
 @media (min-width: 570px) {
@@ -17,9 +24,14 @@
     flex-direction: row;
   }
   .Main {
-    background: #fff;
+    background: var(--clr-bcg-primary);
     width: 72%;
   }
+
+  .Title {
+    font-size: 2rem;
+  }
+
   .Side {
     width: 25%;
   }

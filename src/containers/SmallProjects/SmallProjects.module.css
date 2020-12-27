@@ -1,4 +1,4 @@
-.Project {
+.SmallProjects {
   width: 95%;
   padding: 0;
   margin: 1rem auto;
@@ -13,7 +13,7 @@
 }
 
 @media (min-width: 570px) {
-  .Project {
+  .SmallProjects {
     flex-direction: row;
   }
   .Main {

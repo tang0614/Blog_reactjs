@@ -1,16 +1,19 @@
 .Card {
   position: relative;
-  background-color: #fff;
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+  background-color: var(--clr-bcg-primary);
+  box-shadow: 0 8px 6px -6px var(--clr-font-primary);
+  height: 500px;
+
+  margin-top: 3.5rem;
 }
 
 .Logo {
   display: "inline-block";
   font-family: "Josefin Slab", serif;
   font-family: "Exo", sans-serif;
-  color: #50506b;
+  color: var(--clr-font-secondary);
   font-size: 1.5rem;
-  padding: 2em;
+  padding: 5em 1em;
 
   text-align: center;
 }
@@ -24,36 +27,38 @@
 
 .Nav_2 {
   position: absolute;
-  bottom: -16rem;
+  bottom: -11rem;
   left: 0;
-  background-color: #f8ea8c;
+  background-color: var(--clr--dropdown);
   padding: 1rem;
   z-index: 3;
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+
+  box-shadow: 8px 8px 6px -6px var(--clr-font-primary);
 }
 .Nav_link_2 {
   display: flex;
   flex-direction: column;
   text-align: center;
 
-  font-size: 1.5rem;
-  padding-bottom: 0.5em;
+  font-size: 1rem;
+  padding-bottom: 1em;
   text-decoration: none;
-  color: #50506b;
+  color: var(--clr-font-secondary);
   letter-spacing: 1px;
   text-decoration: none;
 }
 
 .Nav_link_2:hover,
 .Nav_link_2:focus {
-  color: rgb(10, 186, 181, 0.7);
+  color: var(--clr-font-thirdly);
 }
 
 .Button {
   display: block;
-  padding: 0.5rem;
-  color: black;
+  padding: 1rem;
+  color: var(--clr-font-primary);
   border: transparent;
+  background-color: var(--clr-font-thirdly);
 
   position: absolute;
   left: 0;
@@ -61,7 +66,7 @@
 }
 .Button:hover,
 .Button:focus {
-  color: rgb(10, 186, 181, 0.5);
+  color: var(--clr-font-thirdly);
   outline: none;
 }
 
@@ -69,7 +74,7 @@
   display: flex;
   position: absolute;
   right: 0px;
-  bottom: 0px;
+  bottom: 0.2em;
   font-size: 1rem;
   margin: 0 0.5em;
 }
@@ -82,7 +87,41 @@
   outline: none;
 }
 
+.Icon {
+  position: absolute;
+  left: 40%;
+  bottom: 50%;
+
+  font-size: 2rem;
+  color: var(--clr-font-thirdly);
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 1s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.2);
+  }
+}
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.2);
+  }
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.2);
+  }
+}
+
 @media (min-width: 570px) {
+  .Card {
+    height: 200px;
+  }
+  .Logo {
+    padding: 2em;
+  }
   .Nav {
     display: block;
     position: absolute;
@@ -90,7 +129,7 @@
     bottom: 0px;
     margin: 0 1em;
     z-index: 3;
-    background-color: #fff;
+    background-color: var(--clr-bcg-primary);
   }
 
   .Nav_link {
@@ -98,16 +137,19 @@
     text-decoration: none;
     padding: 0 0.5em;
     font-size: 1.5rem;
-    color: #50506b;
+    color: var(--clr-font-secondary);
     letter-spacing: 2px;
   }
 
   .Nav_link:hover,
   .Nav_link:focus {
-    color: rgb(10, 186, 181, 0.5);
+    color: var(--clr-font-thirdly);
   }
 
   .Button {
+    display: none;
+  }
+  .Icon {
     display: none;
   }
   .Nav_2 {
@@ -116,6 +158,9 @@
 }
 
 @media (min-width: 810px) {
+  .Card {
+    height: 400px;
+  }
   .Logo {
     padding: 4em;
     font-size: 2rem;

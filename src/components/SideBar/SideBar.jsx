@@ -7,6 +7,7 @@ import Nav from "../common/nav";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
+import Search from "../common/search";
 
 const info = {
   about_card: {
@@ -68,7 +69,7 @@ const SideBar = (props) => {
       </Card>
 
       <Card style={Classes.Card}>
-        <strong className={Classes.SideBar}>{"Other Posts"}</strong>
+        <div className={Classes.SideBar}>{"Other Posts"}</div>
         <Nav link={link} nav_link_style={Classes.Nav_link} />
       </Card>
 

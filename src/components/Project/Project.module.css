@@ -5,20 +5,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 0.1rem solid #f0f0f0;
+  border-bottom: 0.1rem solid var(--clr-bcg-primary);
   font-family: "Open Sans Condensed", sans-serif;
 }
 
 .ArticleMain {
   width: 100%;
 }
+
 .Title {
   text-align: center;
   font-size: 1.3rem;
 }
 
 .ArticleMain p {
-  font-size: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 1em;
 }
 
 .ArticleSecondary {
@@ -58,7 +61,24 @@
   opacity: 0;
 }
 
+.Screen {
+  position: absolute;
+  top: 70%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  opacity: 0;
+}
+
+.ExternalLink i {
+  position: absolute;
+  top: 90%;
+  right: 0;
+}
 .ArticleSecondary:hover .Button {
+  opacity: 1;
+}
+.ArticleSecondary:hover .Screen {
   opacity: 1;
 }
 
@@ -71,17 +91,19 @@
   font-size: 0.8rem;
   outline: none;
   cursor: pointer;
+  padding: 0.5em 1em;
   border: none;
   border-radius: 10%;
   letter-spacing: 1px;
-  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
-  background-color: rgb(10, 186, 181, 0.8);
+  color: var(--clr-font-secondary);
+  box-shadow: 0 8px 6px -6px var(--clr-font-thirdly);
+  background-color: var(--clr-bcg-thirdly);
 }
 .Text:focus,
 .Text:hover {
   outline: 0;
   box-shadow: none;
-  color: #fff;
+  color: var(--clr-font-primary);
 }
 
 .ArticleImage:hover + .Button {
@@ -94,11 +116,11 @@
   }
 
   .ArticleMain strong {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   .ArticleMain p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .ArticleSecondary {

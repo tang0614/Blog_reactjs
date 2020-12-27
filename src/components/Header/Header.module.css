@@ -3,38 +3,32 @@
   justify-content: space-between;
   align-items: center;
 
-  margin: 0px 0.5rem;
+  width: inherit;
+  max-width: inherit;
+  background-color: var(--clr-bcg-thirdly);
+
+  position: fixed;
+  top: 0;
+
+  z-index: 100;
 }
 
 .Nav_link {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 1rem;
 
   font-size: 1.5rem;
-  color: #565673;
+  color: var(--clr-font-secondary);
   letter-spacing: 0.2px;
   text-decoration: none;
 }
 
 .Nav_link:hover {
-  color: #5f9ea0;
+  color: var(--clr-font-thirdly);
 }
 
 .SocialBar {
   display: inline-block;
-  padding: 0.5rem;
+  padding: 1rem;
   color: "black";
-}
-
-@media (min-width: 810px) {
-  .Header {
-    margin: 0px 1rem;
-  }
-  .Nav_link {
-    padding: 1rem;
-  }
-
-  .SocialBar {
-    padding: 1rem;
-  }
 }

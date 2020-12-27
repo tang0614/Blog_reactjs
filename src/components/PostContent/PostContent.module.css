@@ -2,7 +2,6 @@
   width: 95%;
   padding: 0;
   margin: 1rem auto;
-  font-family: "Open Sans Condensed", sans-serif;
 
   display: flex;
   flex-direction: column;
@@ -10,8 +9,7 @@
 }
 
 .Main {
-  background: #fff;
-  padding: 1rem 0;
+  background: var(--clr-bcg-primary);
 }
 
 .Section {
@@ -19,16 +17,25 @@
 }
 
 .Title {
+  font-size: 1.4rem;
+  padding: 1em 0;
   text-align: center;
-  font-size: 1.2rem;
 }
 
-.Content {
-  font-size: 1rem;
+.Subtitle {
+  font-size: 1.3rem;
+  padding: 1em 0;
+  font-weight: 600;
+  text-align: center;
+}
+.Content p {
+  font-size: 1.2rem;
   margin: 0 1em;
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
+  padding: 1rem 0;
 }
+
 .Img {
   display: block;
   width: 100%;
@@ -40,14 +47,20 @@
     flex-direction: row;
   }
   .Main {
-    background: #fff;
+    background: var(--clr-bcg-primary);
     width: 72%;
     padding: 2rem;
   }
 
   .Title {
-    text-align: center;
     font-size: 1.5rem;
+  }
+
+  .Subtitle {
+    font-size: 1.5rem;
+  }
+  .Content p {
+    font-size: 1.3rem;
   }
 
   .Side {

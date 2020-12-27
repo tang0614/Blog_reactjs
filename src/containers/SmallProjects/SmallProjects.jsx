@@ -1,19 +1,19 @@
-import Classes from "./Home.module.css";
-
-import React, { Component } from "react";
+import Classes from "./SmallProjects.module.css";
+import React from "react";
 import SideBar from "../../components/SideBar/SideBar";
 import Project from "../../components/Project/Project";
 import http from "../../httpService";
+
 import { useState } from "react";
 import { useEffect } from "react";
 
-const Home = (props) => {
+const SmallProjects = (props) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
     console.log("component did mount/updated");
     http
-      .get("/api")
+      .get("/api/sides")
       .then((res) => {
         setProjects(res.data);
       })
@@ -23,11 +23,8 @@ const Home = (props) => {
   }, []);
 
   return (
-    <div className={Classes.Home} id="place-to-visit">
+    <div className={Classes.SmallProjects}>
       <main className={Classes.Main}>
-        <p style={{ color: "var(--clr-font-thirdly)" }} className={Classes.Title}>
-          My Personal Projects - Everything Built from Scratch
-        </p>
         {projects
           ? projects.map((project, id) => (
               <Project
@@ -45,4 +42,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default SmallProjects;

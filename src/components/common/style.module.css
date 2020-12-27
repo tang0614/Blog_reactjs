@@ -39,7 +39,7 @@
   padding: 0.5em 0;
   margin: auto;
   font-size: 0.8rem;
-  color: #565673;
+  color: var(--clr-font-secondary);
   letter-spacing: 1px;
 }
 .Nav_link {
@@ -51,22 +51,36 @@
 
   font-size: 1rem;
   font-weight: 500;
-  color: #565673;
+  color: var(--clr-font-secondary);
   letter-spacing: 1.2px;
   text-align: center;
 }
 .Nav_link i {
   cursor: pointer;
+  border-bottom: 1px solid var(--clr-font-thirdly);
+  color: var(--clr-font-thirdly);
 }
 
 .Nav_link:hover,
 .Nav_link:focus {
-  color: rgb(10, 186, 181, 0.5);
+  color: var(--clr-font-thirdly);
 }
-
+.inputStyle {
+  background-color: var(--clr-font-thirdly);
+}
 .Typing {
   display: inline;
 }
+
+input[type="text"],
+textarea {
+  background-color: var(--clr-bcg-primary);
+}
+
+input::placeholder {
+  font-size: 1rem;
+}
+
 @media (max-width: 810px) {
   .Post_category {
     font-size: 0.8rem;
@@ -102,5 +116,9 @@
 
   .Nav_link i {
     font-size: 1rem;
+  }
+
+  input::placeholder {
+    font-size: 0.8rem;
   }
 }
